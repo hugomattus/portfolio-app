@@ -1,65 +1,101 @@
-import Image from "next/image";
+'use client';
+
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { translations } from '@/lib/translations';
+import { getAllProjects } from '@/lib/projects';
+import { useLanguage } from '@/lib/useLanguage';
 
 export default function Home() {
+  const { language, isMounted } = useLanguage();
+  const [availabilityDate, setAvailabilityDate] = useState('');
+  const projects = getAllProjects();
+
+  const months = {
+    pt: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+    en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  };
+
+  useEffect(() => {
+    const now = new Date();
+    const monthName = months[language][now.getMonth()];
+    const year = now.getFullYear();
+    setAvailabilityDate(`${monthName} de ${year}`);
+  }, [language]);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let isExpanded = false;
+    let lastToggleTime = 0;
+    const throttle = 1000;
+
+    const handleScroll = () => {
+      const now = Date.now();
+      if (now - lastToggleTime < throttle) return;
+
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+
+      const videoElement = document.querySelector('.hero-video') as HTMLElement;
+      if (!videoElement) return;
+
+      if (isScrollingDown && !isExpanded) {
+        videoElement.classList.add('expanded');
+        isExpanded = true;
+        lastToggleTime = now;
+      } else if (!isScrollingDown && isExpanded) {
+        videoElement.classList.remove('expanded');
+        isExpanded = false;
+        lastToggleTime = now;
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="intro intro-section">
+        <div className="intro-header">
+          <h1 className="title">{translations[language].freelancerTitle}</h1>
+          <div className="availability">
+            <div>
+              <div className="availability-status">
+                <span className="availability-dot"></span>
+                <span className="availability-text">{translations[language].disponivel}</span>
+              </div>
+              <div className="availability-date">{availabilityDate}</div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+        <div className="intro-bottom">
+          <p className="lede">{translations[language].freelancerBio}</p>
+          <a href="https://wa.me/5571999999999" className="contact-link">
+            {translations[language].entrarEmContato}
           </a>
         </div>
-      </main>
-    </div>
+        <div className="hero-video">
+          <video width="1320" height="792" autoPlay muted loop playsInline>
+            <source src="/assets/345137_medium.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section className="work">
+        <h2 className="section-label">{translations[language].projetosSelecionados}</h2>
+        <div className="work-grid">
+          {projects.map((project) => (
+            <div key={project.id} className="work-card-wrapper">
+              <Link href={`/projects/${project.slug}`} className="work-card"></Link>
+              <h3 className="work-card-title">{project.title}</h3>
+              <p className="work-card-description">{project.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

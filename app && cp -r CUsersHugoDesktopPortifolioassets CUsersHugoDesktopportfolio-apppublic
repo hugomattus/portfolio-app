@@ -63,11 +63,6 @@ a:hover {
   opacity: 0.6;
 }
 
-/* Language transition */
-h1, h2, h3, p, span, button, a {
-  transition: opacity 0.3s ease;
-}
-
 .page {
   max-width: 1320px;
   margin: 0 auto;
@@ -81,7 +76,8 @@ h1, h2, h3, p, span, button, a {
   margin-top: 96px;
 }
 
-.page.ready {
+.page.ready,
+.page.transitioning {
   opacity: 1;
 }
 
