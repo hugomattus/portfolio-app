@@ -55,11 +55,11 @@ export default function ProjectPage() {
           </Link>
         </div>
         <div style={{ width: '100%', height: '792px', backgroundColor: '#f3f4f6', borderRadius: '8px', marginTop: '32px' }}></div>
-        <div className="project-grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start', marginTop: '80px' }}>
+        <div className="project-grid-2col grid-2col">
           <div></div>
           <section style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <h2 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.2 }}>{project.secondaryTitle}</h2>
-            <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.6 }}>
+            <h2 className="heading-section">{project.secondaryTitle}</h2>
+            <p className="paragraph-muted">
               {project.description}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '24px' }}>
@@ -77,8 +77,8 @@ export default function ProjectPage() {
               </div>
             </div>
             <section style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '80px' }}>
-              <h2 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.2 }}>Meu papel</h2>
-              <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.6 }}>
+              <h2 className="heading-section">Meu papel</h2>
+              <p className="paragraph-muted">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <div style={{ marginTop: '24px' }}>
@@ -91,7 +91,7 @@ export default function ProjectPage() {
                   <li style={{ fontSize: '16px', color: '#6b7280' }}>• Atribuição 5</li>
                 </ul>
               </div>
-              <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.6, marginTop: '24px' }}>
+              <p className="paragraph-muted" style={{ marginTop: '24px' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </section>
@@ -99,37 +99,37 @@ export default function ProjectPage() {
         </div>
 
         <div className="project-grid-4img" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', marginTop: '80px' }}>
-          <div className="project-img-400" style={{ width: '100%', height: '400px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
-          <div className="project-img-400" style={{ width: '100%', height: '400px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
-          <div className="project-img-400" style={{ width: '100%', height: '400px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
-          <div className="project-img-400" style={{ width: '100%', height: '400px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
+          <div className="project-img-400 placeholder-box-400"></div>
+          <div className="project-img-400 placeholder-box-400"></div>
+          <div className="project-img-400 placeholder-box-400"></div>
+          <div className="project-img-400 placeholder-box-400"></div>
         </div>
 
-        <div className="project-grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start', marginTop: '80px' }}>
+        <div className="project-grid-2col grid-2col">
           <div></div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <h2 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.2 }}>Resultados</h2>
-            <p style={{ fontSize: '18px', color: '#6b7280', lineHeight: 1.6 }}>
+            <h2 className="heading-section">Resultados</h2>
+            <p className="paragraph-muted">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '24px' }}>
               <div>
-                <h3 style={{ fontSize: '20px', fontWeight: 500, color: '#111111', marginBottom: '12px' }}>Descoberta</h3>
+                <h3 className="heading-subsection">Descoberta</h3>
                 <p style={{ fontSize: '16px', color: '#6b7280', lineHeight: 1.6 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
 
               <div>
-                <h3 style={{ fontSize: '20px', fontWeight: 500, color: '#111111', marginBottom: '12px' }}>Design</h3>
+                <h3 className="heading-subsection">Design</h3>
                 <p style={{ fontSize: '16px', color: '#6b7280', lineHeight: 1.6 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
 
               <div>
-                <h3 style={{ fontSize: '20px', fontWeight: 500, color: '#111111', marginBottom: '12px' }}>Final</h3>
+                <h3 className="heading-subsection">Final</h3>
                 <p style={{ fontSize: '16px', color: '#6b7280', lineHeight: 1.6 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -140,18 +140,18 @@ export default function ProjectPage() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '24px', marginTop: '80px' }}>
-          <div className="project-img-600" style={{ width: '100%', height: '600px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
-          <div className="project-img-600" style={{ width: '100%', height: '600px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
-          <div className="project-img-600" style={{ width: '100%', height: '600px', backgroundColor: '#f3f4f6', borderRadius: '8px' }}></div>
+          <div className="project-img-600 placeholder-box-600"></div>
+          <div className="project-img-600 placeholder-box-600"></div>
+          <div className="project-img-600 placeholder-box-600"></div>
         </div>
       </div>
 
-      <div className="project-grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start', marginTop: '80px' }}>
+      <div className="project-grid-2col grid-2col">
         <div>
-          <h2 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.2 }}>Explore</h2>
+          <h2 className="heading-section">Explore</h2>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.2, color: '#6b7280' }}>Outros projetos</h2>
+          <h2 className="heading-section" style={{ color: '#6b7280' }}>Outros projetos</h2>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0' }}>
             {allProjects.map((proj) => (
               proj.slug !== slug && (
