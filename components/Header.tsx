@@ -119,7 +119,7 @@ export default function Header() {
           <p style={{
             fontSize: '20px',
             fontWeight: 500,
-            color: '#111111',
+            color: 'var(--fg)',
             margin: 0,
             padding: 0,
             height: showProjectTitleInHeader && showCloseButton ? 'auto' : 0,
@@ -173,8 +173,8 @@ export default function Header() {
                 href="/"
                 style={{
                   fontSize: '14px',
-                  color: '#6b7280',
-                  backgroundColor: '#f3f4f6',
+                  color: 'var(--text-secondary)',
+                  backgroundColor: 'var(--bg-light)',
                   padding: '4px 6px',
                   borderRadius: '50%',
                   display: 'inline-flex',
@@ -204,7 +204,7 @@ export default function Header() {
                 justifyContent: 'center',
                 width: '24px',
                 height: '24px',
-                color: '#111111',
+                color: 'var(--fg)',
                 fontSize: '16px',
                 cursor: 'pointer',
                 opacity: 1,
@@ -225,7 +225,7 @@ export default function Header() {
                 display: 'none',
                 background: 'none',
                 border: 'none',
-                color: '#111111',
+                color: 'var(--fg)',
                 cursor: 'pointer',
                 padding: 0,
                 fontSize: '16px',
@@ -265,7 +265,7 @@ export default function Header() {
                     setMenuOpen(false);
                     window.location.href = '/';
                   }}
-                  style={{ fontSize: '16px', color: '#111111' }}
+                  style={{ fontSize: '16px', color: 'var(--fg)' }}
                   className={pathname === '/' ? 'is-current' : ''}
                 >
                   {translations[language].projetos}
@@ -277,7 +277,7 @@ export default function Header() {
                     setMenuOpen(false);
                     window.location.href = '/information';
                   }}
-                  style={{ fontSize: '16px', color: '#111111' }}
+                  style={{ fontSize: '16px', color: 'var(--fg)' }}
                   className={pathname === '/information' ? 'is-current' : ''}
                 >
                   {translations[language].informacoes}

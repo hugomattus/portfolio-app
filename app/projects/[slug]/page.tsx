@@ -37,9 +37,9 @@ export default function ProjectPage() {
             href="/"
             style={{
               fontSize: '16px',
-              color: '#6b7280',
+              color: 'var(--text-secondary)',
               cursor: 'pointer',
-              backgroundColor: '#f3f4f6',
+              backgroundColor: 'var(--bg-light)',
               borderRadius: '50%',
               display: 'inline-flex',
               alignItems: 'center',
@@ -54,7 +54,7 @@ export default function ProjectPage() {
             ✕
           </Link>
         </div>
-        <div style={{ width: '100%', height: '792px', backgroundColor: '#f3f4f6', borderRadius: '8px', marginTop: '32px' }}></div>
+        <div style={{ width: '100%', height: '792px', backgroundColor: 'var(--bg-light)', borderRadius: '8px', marginTop: '32px' }}></div>
         <div className="project-grid-2col grid-2col">
           <div></div>
           <section style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -64,16 +64,16 @@ export default function ProjectPage() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '24px' }}>
               <div>
-                <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '4px' }}>CLIENT</p>
-                <p style={{ fontSize: '16px', color: '#111111' }}>{project.client}</p>
+                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '4px' }}>CLIENT</p>
+                <p style={{ fontSize: '16px', color: 'var(--fg)' }}>{project.client}</p>
               </div>
               <div>
-                <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '4px' }}>ROLE</p>
-                <p style={{ fontSize: '16px', color: '#111111' }}>{project.role}</p>
+                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '4px' }}>ROLE</p>
+                <p style={{ fontSize: '16px', color: 'var(--fg)' }}>{project.role}</p>
               </div>
               <div>
-                <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '4px' }}>SERVICE</p>
-                <p style={{ fontSize: '16px', color: '#111111' }}>{project.service}</p>
+                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '4px' }}>SERVICE</p>
+                <p style={{ fontSize: '16px', color: 'var(--fg)' }}>{project.service}</p>
               </div>
             </div>
             <section style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '80px' }}>
@@ -82,13 +82,13 @@ export default function ProjectPage() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <div style={{ marginTop: '24px' }}>
-                <p style={{ fontSize: '16px', color: '#111111', fontWeight: 500, marginBottom: '16px' }}>Meu papel incluiu</p>
+                <p style={{ fontSize: '16px', color: 'var(--fg)', fontWeight: 500, marginBottom: '16px' }}>Meu papel incluiu</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <li style={{ fontSize: '16px', color: '#6b7280' }}>• Atribuição 1</li>
-                  <li style={{ fontSize: '16px', color: '#6b7280' }}>• Atribuição 2</li>
-                  <li style={{ fontSize: '16px', color: '#6b7280' }}>• Atribuição 3</li>
-                  <li style={{ fontSize: '16px', color: '#6b7280' }}>• Atribuição 4</li>
-                  <li style={{ fontSize: '16px', color: '#6b7280' }}>• Atribuição 5</li>
+                  <li style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>• Atribuição 1</li>
+                  <li style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>• Atribuição 2</li>
+                  <li style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>• Atribuição 3</li>
+                  <li style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>• Atribuição 4</li>
+                  <li style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>• Atribuição 5</li>
                 </ul>
               </div>
               <p className="paragraph-muted" style={{ marginTop: '24px' }}>
@@ -116,21 +116,21 @@ export default function ProjectPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '24px' }}>
               <div>
                 <h3 className="heading-subsection">Descoberta</h3>
-                <p style={{ fontSize: '16px', color: '#6b7280', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
 
               <div>
                 <h3 className="heading-subsection">Design</h3>
-                <p style={{ fontSize: '16px', color: '#6b7280', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
 
               <div>
                 <h3 className="heading-subsection">Final</h3>
-                <p style={{ fontSize: '16px', color: '#6b7280', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
@@ -151,7 +151,7 @@ export default function ProjectPage() {
           <h2 className="heading-section">Explore</h2>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <h2 className="heading-section" style={{ color: '#6b7280' }}>Outros projetos</h2>
+          <h2 className="heading-section" style={{ color: 'var(--text-secondary)' }}>Outros projetos</h2>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0' }}>
             {allProjects.map((proj) => (
               proj.slug !== slug && (
@@ -161,13 +161,13 @@ export default function ProjectPage() {
                   onMouseLeave={() => setHoveredProject(null)}
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px', paddingTop: '24px', paddingBottom: '24px', borderBottom: '1px solid #e5e5e5' }}
                 >
-                  <Link href={`/projects/${proj.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '16px', color: '#111111', textDecoration: 'none' }}>
-                    <span className="project-list-year" style={{ fontSize: '14px', color: '#6b7280', marginRight: '80px' }}>2025</span>
+                  <Link href={`/projects/${proj.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '16px', color: 'var(--fg)', textDecoration: 'none' }}>
+                    <span className="project-list-year" style={{ fontSize: '14px', color: 'var(--text-secondary)', marginRight: '80px' }}>2025</span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', position: 'relative' }}>
                       <div className="project-thumbnail" style={{
                         width: '56px',
                         height: '56px',
-                        backgroundColor: '#f3f4f6',
+                        backgroundColor: 'var(--bg-light)',
                         borderRadius: '4px',
                         flexShrink: 0,
                         transform: hoveredProject === proj.slug ? 'translateX(calc(100% + 16px))' : 'translateX(0)',
@@ -176,7 +176,7 @@ export default function ProjectPage() {
                       <span style={{ transform: hoveredProject === proj.slug ? 'translateX(calc(-100% - 16px))' : 'translateX(0)', transition: 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}>{proj.title}</span>
                     </div>
                   </Link>
-                  <p style={{ fontSize: '14px', color: '#6b7280', textAlign: 'right', maxWidth: '200px' }}>
+                  <p style={{ fontSize: '14px', color: 'var(--text-secondary)', textAlign: 'right', maxWidth: '200px' }}>
                     {proj.description}
                   </p>
                 </li>
