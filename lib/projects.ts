@@ -7,16 +7,6 @@ export interface Project {
   client: string;
   role: string;
   service: string;
-  images: string[];
-  sections: ProjectSection[];
-  results: string;
-  lessonsLearned: string;
-}
-
-export interface ProjectSection {
-  title: string;
-  description: string;
-  images?: string[];
 }
 
 export const projects: Project[] = [
@@ -29,15 +19,6 @@ export const projects: Project[] = [
     client: 'Client Name',
     role: 'Product Designer',
     service: 'Design + Interaction',
-    images: [],
-    sections: [
-      {
-        title: 'Section 1',
-        description: 'Description here',
-      },
-    ],
-    results: 'Results here',
-    lessonsLearned: 'Lessons learned here',
   },
   {
     id: 2,
@@ -48,15 +29,6 @@ export const projects: Project[] = [
     client: 'Client Name',
     role: 'Product Designer',
     service: 'Design + Interaction',
-    images: [],
-    sections: [
-      {
-        title: 'Section 1',
-        description: 'Description here',
-      },
-    ],
-    results: 'Results here',
-    lessonsLearned: 'Lessons learned here',
   },
   {
     id: 3,
@@ -67,15 +39,6 @@ export const projects: Project[] = [
     client: 'Client Name',
     role: 'Product Designer',
     service: 'Design + Interaction',
-    images: [],
-    sections: [
-      {
-        title: 'Section 1',
-        description: 'Description here',
-      },
-    ],
-    results: 'Results here',
-    lessonsLearned: 'Lessons learned here',
   },
   {
     id: 4,
@@ -86,15 +49,6 @@ export const projects: Project[] = [
     client: 'Client Name',
     role: 'Product Designer',
     service: 'Design + Interaction',
-    images: [],
-    sections: [
-      {
-        title: 'Section 1',
-        description: 'Description here',
-      },
-    ],
-    results: 'Results here',
-    lessonsLearned: 'Lessons learned here',
   },
 ];
 
