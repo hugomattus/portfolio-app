@@ -5,9 +5,8 @@
   --fg: #111111;
   --muted: #8a8a85;
   --rule: #e5e5e5;
-  --accent: #111111;
-  --text-secondary: var(--text-secondary);
-  --bg-light: var(--bg-light);
+  --text-secondary: #6b7280;
+  --bg-light: #f3f4f6;
   --success: #22c55e;
   --sans: "Switzer", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     Arial, sans-serif;
@@ -688,11 +687,6 @@ h1, h2, h3, p, span, button, a {
 .footer-design .footer-section-title,
 .footer-email .footer-section-title {
   margin-bottom: 8px;
-}
-
-.email {
-  color: var(--fg);
-  font-family: var(--mono);
 }
 
 .social {
