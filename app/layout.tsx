@@ -18,7 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      <head>
+        <meta name="google" content="notranslate" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap" rel="stylesheet" />
+      </head>
       <body>
         <CustomCursor />
         <Header />
