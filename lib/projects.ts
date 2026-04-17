@@ -16,17 +16,12 @@ export interface Project {
   designText: string;
   finalTitle: string;
   finalText: string;
-  images: {
-    hero: string;
-    features: string[];
-    results: string[];
-  };
 }
 
 export const projects: Project[] = [
   {
     id: 1,
-    slug: 'project-1',
+    slug: 'M5',
     title: 'M5',
     secondaryTitle: 'O Banco que investe em resultados',
     description: 'A M5 é um banco digital pensado para quem vive de tráfego pago. Aqui, você abre sua conta em minutos, cria cartões dedicados para cada campanha e acompanha seus gastos com anúncios em tempo real, sem depender de banco tradicional, sem burocracia, sem limite travado.',
@@ -42,15 +37,10 @@ export const projects: Project[] = [
     designText: 'Fizemos a criação de wireframes e protótipos para validar as ideias de design, garantindo que a experiência fosse intuitiva e centrada no usuário. Colaboramos estreitamente com os times de desenvolvimento e produto para iterar e refinar o design com base no feedback contínuo. Assim chegando a um resultado final que atendeu às necessidades dos usuários e aos objetivos do negócio.',
     finalTitle: 'Final',
     finalText: 'Ao final do projeto, entregamos uma experiência digital que foi bem recebida pelos usuários, resultando em um aumento significativo nas conversões e na satisfação do cliente. O produto se destacou no mercado por sua facilidade de uso e por atender às necessidades específicas dos usuários de tráfego pago, contribuindo para o sucesso geral do banco digital M5. Ainda estamos em processo de acompanhamento dos resultados e iterando com base no feedback dos usuários para continuar melhorando a experiência ao longo do tempo.',
-    images: {
-      hero: '/assets/m5/hero.jpg',
-      features: ['/assets/m5/feature-1.jpg', '/assets/m5/feature-2.jpg', '/assets/m5/feature-3.jpg', '/assets/m5/feature-4.jpg'],
-      results: ['/assets/m5/result-1.jpg', '/assets/m5/result-2.jpg', '/assets/m5/result-3.jpg'],
-    },
   },
   {
     id: 2,
-    slug: 'bora',
+    slug: 'Bora',
     title: 'Bora',
     secondaryTitle: 'Conectando passageiros e motoristas.',
     description: 'Bora é um aplicativo de mobilidade urbana que conecta passageiros a motoristas de forma rápida, intuitiva e acessível, com foco em experiência e eficiência.',
@@ -65,13 +55,9 @@ export const projects: Project[] = [
     designTitle: 'Design',
     designText: 'A fase de design focou na criação de fluxos claros e objetivos para dois perfis distintos: passageiros e motoristas. Desenvolvi wireframes para validar a arquitetura de informação e, em seguida, evoluí para interfaces visuais com foco em clareza, hierarquia e rapidez de interação. Também criei um design system base para garantir consistência entre os dois aplicativos.',
     finalTitle: 'Final',
-    finalText: 'O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.',
-    images: {
-      hero: '/assets/bora/hero.jpg',
-      features: ['/assets/bora/feature-1.jpg', '/assets/bora/feature-2.jpg', '/assets/bora/feature-3.jpg', '/assets/bora/feature-4.jpg'],
-      results: ['/assets/bora/result-1.jpg', '/assets/bora/result-2.jpg', '/assets/bora/result-3.jpg'],
-    },
-  },
+    finalText: 'O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.'
+  }
+  
   {
     id: 3,
     slug: 'project-3',
@@ -90,11 +76,6 @@ export const projects: Project[] = [
     designText: 'Texto sobre a fase de design do projeto',
     finalTitle: 'Final',
     finalText: 'Texto sobre a fase final do projeto',
-    images: {
-      hero: '/assets/moneyboxes/hero.jpg',
-      features: ['/assets/moneyboxes/feature-1.jpg', '/assets/moneyboxes/feature-2.jpg', '/assets/moneyboxes/feature-3.jpg', '/assets/moneyboxes/feature-4.jpg'],
-      results: ['/assets/moneyboxes/result-1.jpg', '/assets/moneyboxes/result-2.jpg', '/assets/moneyboxes/result-3.jpg'],
-    },
   },
   {
     id: 4,
@@ -114,11 +95,6 @@ export const projects: Project[] = [
     designText: 'Texto sobre a fase de design do projeto',
     finalTitle: 'Final',
     finalText: 'Texto sobre a fase final do projeto',
-    images: {
-      hero: '/assets/mini-apps/hero.jpg',
-      features: ['/assets/mini-apps/feature-1.jpg', '/assets/mini-apps/feature-2.jpg', '/assets/mini-apps/feature-3.jpg', '/assets/mini-apps/feature-4.jpg'],
-      results: ['/assets/mini-apps/result-1.jpg', '/assets/mini-apps/result-2.jpg', '/assets/mini-apps/result-3.jpg'],
-    },
   },
 ];
 
