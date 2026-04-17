@@ -21,11 +21,11 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="google" content="notranslate" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/Favicon.png" />
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap" rel="stylesheet" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <CustomCursor />
         <Header />
         <PageTransition />

@@ -54,7 +54,7 @@ export default function ProjectPage() {
             ✕
           </Link>
         </div>
-        <div style={{ width: '100%', height: '792px', backgroundColor: 'var(--bg-light)', borderRadius: '8px', marginTop: '32px' }}></div>
+        <img src={project.images.hero} alt={project.title} style={{ width: '100%', height: '792px', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />
         <div className="project-grid-2col grid-2col">
           <div></div>
           <section style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -94,10 +94,9 @@ export default function ProjectPage() {
         </div>
 
         <div className="project-grid-4img" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', marginTop: '80px' }}>
-          <div className="project-img-400 placeholder-box-400"></div>
-          <div className="project-img-400 placeholder-box-400"></div>
-          <div className="project-img-400 placeholder-box-400"></div>
-          <div className="project-img-400 placeholder-box-400"></div>
+          {project.images.features.map((img, index) => (
+            <img key={index} src={img} alt={`Feature ${index + 1}`} style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} />
+          ))}
         </div>
 
         <div className="project-grid-2col grid-2col">
@@ -135,9 +134,9 @@ export default function ProjectPage() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '24px', marginTop: '80px' }}>
-          <div className="project-img-600 placeholder-box-600"></div>
-          <div className="project-img-600 placeholder-box-600"></div>
-          <div className="project-img-600 placeholder-box-600"></div>
+          {project.images.results.map((img, index) => (
+            <img key={index} src={img} alt={`Result ${index + 1}`} style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} />
+          ))}
         </div>
       </div>
 
@@ -171,8 +170,8 @@ export default function ProjectPage() {
                       <span style={{ transform: hoveredProject === proj.slug ? 'translateX(calc(-100% - 16px))' : 'translateX(0)', transition: 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}>{proj.title}</span>
                     </div>
                   </Link>
-                  <p style={{ fontSize: '14px', color: 'var(--text-secondary)', textAlign: 'right', maxWidth: '200px' }}>
-                    {proj.description}
+                  <p style={{ fontSize: '16px', color: 'var(--text-secondary)', textAlign: 'right', maxWidth: '300px', lineHeight: 1.5 }}>
+                    {proj.secondaryTitle}
                   </p>
                 </li>
               )

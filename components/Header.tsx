@@ -17,6 +17,8 @@ export default function Header() {
   const [showProjectTitleInHeader, setShowProjectTitleInHeader] = useState(false);
 
   useEffect(() => {
+    if (!isMounted) return;
+
     const updateTime = () => {
       const now = new Date();
       setCurrentTime(now.toLocaleTimeString('pt-BR'));
@@ -25,7 +27,7 @@ export default function Header() {
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isMounted]);
 
   // Previne scroll quando menu está aberto e fecha menu ao mudar de página
   useEffect(() => {
