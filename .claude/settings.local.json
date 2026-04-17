@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(node generate-placeholders.js)",
+      "Bash(curl -s -I \"https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap\")",
+      "Bash(timeout 30 tail -f C:\\\\Users\\\\Hugo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Hugo-Desktop-portfolio-app\\\\3f863463-65d6-4889-b113-388335f1c315\\\\tasks\\\\b24s08hek.output)",
+      "Bash(taskkill *)",
+      "Bash(kill -9 9156)",
+      "Bash(timeout 30 tail -f C:\\\\Users\\\\Hugo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Hugo-Desktop-portfolio-app\\\\3f863463-65d6-4889-b113-388335f1c315\\\\tasks\\\\b6s7nr5yg.output)",
+      "Bash(netstat -ano)",
+      "Bash(wmic process *)",
+      "Bash(grep -v '^$')",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git config *)",
+      "Bash(grep -r \"#[0-9a-f]\\\\{6\\\\}\" app/projects/[slug]/page.tsx components/Header.tsx app/globals.css --color=never)",
+      "Bash(xargs grep *)"
+    ]
+  }
+}

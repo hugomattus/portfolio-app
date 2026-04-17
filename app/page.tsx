@@ -25,9 +25,8 @@ export default function Home() {
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
-    let isExpanded = false;
     let lastToggleTime = 0;
-    const throttle = 1000;
+    const throttle = 600;
 
     const handleScroll = () => {
       const now = Date.now();
@@ -39,13 +38,13 @@ export default function Home() {
       const videoElement = document.querySelector('.hero-video') as HTMLElement;
       if (!videoElement) return;
 
+      const isExpanded = videoElement.classList.contains('expanded');
+
       if (isScrollingDown && !isExpanded) {
         videoElement.classList.add('expanded');
-        isExpanded = true;
         lastToggleTime = now;
       } else if (!isScrollingDown && isExpanded) {
         videoElement.classList.remove('expanded');
-        isExpanded = false;
         lastToggleTime = now;
       }
 
@@ -91,7 +90,7 @@ export default function Home() {
             <div key={project.id} className="work-card-wrapper">
               <Link href={`/projects/${project.slug}`} className="work-card"></Link>
               <h3 className="work-card-title">{project.title}</h3>
-              <p className="work-card-description">{project.description}</p>
+              <p className="work-card-description">{project.secondaryTitle}</p>
             </div>
           ))}
         </div>

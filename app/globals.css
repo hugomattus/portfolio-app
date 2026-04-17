@@ -546,9 +546,9 @@ h1, h2, h3, p, span, button, a {
 
 .work-card-description {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--muted);
-  margin: 8px 0 0 0;
+  margin: 4px 0 0 0;
 }
 
 /* Information page */
@@ -872,7 +872,7 @@ h1, h2, h3, p, span, button, a {
   }
 
   .work-card-description {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .hero-video.expanded {
@@ -927,6 +927,10 @@ h1, h2, h3, p, span, button, a {
 
   .project-header-section {
     padding-top: 32px !important;
+  }
+
+  .project-title {
+    font-size: 20px !important;
   }
 
   /* Footer mobile */

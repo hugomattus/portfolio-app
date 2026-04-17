@@ -32,6 +32,11 @@ export default function Footer() {
           <a href="mailto:contatoxmello@gmail.com">contatoxmello@gmail.com</a>
         </nav>
       </div>
+
+      <div className="footer-copyright">
+        <span>© Todos os direitos reservados a Hugo Mello</span>
+        <span>{new Date().getFullYear()}</span>
+      </div>
     </>
   );
 }
