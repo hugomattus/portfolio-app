@@ -33,7 +33,7 @@ export default function FloatingButton() {
     return (
       <>
         <div className="intro-section" ref={targetRef} />
-        <a href="https://wa.me/5571999999999" className="floating-button">
+        <a href="https://wa.me/5575998855521" className="floating-button">
           <span className="floating-dot"></span>
           <span>Entre em contato</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="floating-arrow">
@@ -49,7 +49,7 @@ export default function FloatingButton() {
     <>
       <div className="intro-section" ref={targetRef} />
       <a
-        href="https://wa.me/5571999999999"
+        href="https://wa.me/5575998855521"
         className={`floating-button ${visible ? 'visible' : ''}`}
       >
         <span className="floating-dot"></span>

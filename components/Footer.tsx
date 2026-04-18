@@ -13,16 +13,16 @@ export default function Footer() {
       <div className="footer-section footer-social">
         <span className="footer-section-title">{translations[language].redesSociais}</span>
         <nav className="social">
-          <a href="#">LinkedIn</a>
-          <a href="#">Instagram</a>
+          <a href="https://www.linkedin.com/in/hugomatosui/">LinkedIn</a>
+          <a href="https://www.instagram.com/hugo.mllo?igsh=Ynl6NDdtaXMxN21y&utm_source=qr">Instagram</a>
         </nav>
       </div>
 
       <div className="footer-section footer-design">
         <span className="footer-section-title">Design</span>
         <nav className="social">
-          <a href="#">Behance</a>
-          <a href="#">Dribbble</a>
+          <a href="https://www.behance.net/hugomattosbe">Behance</a>
+          <a href="https://dribbble.com/hugomattus">Dribbble</a>
         </nav>
       </div>
 

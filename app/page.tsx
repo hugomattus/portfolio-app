@@ -41,7 +41,7 @@ export default function Home() {
         </div>
         <div className="intro-bottom">
           <p className="lede">{translations[language].freelancerBio}</p>
-          <a href="https://wa.me/5571999999999" className="contact-link">
+          <a href="https://wa.me/5575998855521" className="contact-link">
             {translations[language].entrarEmContato}
           </a>
         </div>
