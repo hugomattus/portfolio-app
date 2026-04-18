@@ -87,9 +87,16 @@ export default function Home() {
         <h2 className="section-label">{translations[language].projetosSelecionados}</h2>
         <div className="work-grid">
           {projects.map((project) => (
-            <div key={project.id} className="work-card-wrapper">
-              <Link href={`/projects/${project.slug}`} className="work-card" style={{ overflow: 'hidden', borderRadius: '8px' }}>
-                {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />}
+            <div key={project.id} className="work-card-wrapper" style={{ opacity: project.comingSoon ? 0.6 : 1 }}>
+              <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} className="work-card" style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto' }} onClick={(e) => project.comingSoon && e.preventDefault()}>
+                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
+                  {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: project.comingSoon ? 'default' : 'pointer' }} onMouseEnter={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1.05)')} onMouseLeave={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1)')} />}
+                  {project.comingSoon && (
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.4)', color: 'white', fontSize: '18px', fontWeight: 500 }}>
+                      Em breve
+                    </div>
+                  )}
+                </div>
               </Link>
               <h3 className="work-card-title">{project.title}</h3>
               <p className="work-card-description">{project.secondaryTitle}</p>

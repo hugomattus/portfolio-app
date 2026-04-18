@@ -17,6 +17,7 @@ export interface Project {
   finalTitle: string;
   finalText: string;
   year?: string;
+  comingSoon?: boolean;
   cover?: string;
   thumbnail?: string;
   images: {
@@ -73,6 +74,7 @@ export const projects: Project[] = [
     finalTitle: 'Final',
     finalText: 'O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.',
     year: '',
+    comingSoon: true,
     images: {
       hero: '',
       features: ['', '', ''],
@@ -99,6 +101,7 @@ export const projects: Project[] = [
     finalTitle: 'Final',
     finalText: 'Texto sobre a fase final do projeto',
     year: '',
+    comingSoon: true,
     images: {
       hero: '',
       features: ['', '', ''],
@@ -124,6 +127,7 @@ export const projects: Project[] = [
     finalTitle: 'Final',
     finalText: 'Texto sobre a fase final do projeto',
     year: '',
+    comingSoon: true,
     images: {
       hero: '',
       features: ['', '', ''],
