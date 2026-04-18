@@ -93,8 +93,7 @@ export default function Home() {
                   const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
                   if (cursorEl) {
                     cursorEl.textContent = 'Em breve';
-                    cursorEl.classList.add('active');
-                    cursorEl.style.background = 'rgba(255, 0, 0, 0.8)';
+                    cursorEl.style.fontSize = '10px';
                   }
                 }
               }} onMouseLeave={(e) => {
@@ -102,8 +101,7 @@ export default function Home() {
                   const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
                   if (cursorEl) {
                     cursorEl.textContent = '';
-                    cursorEl.classList.remove('active');
-                    cursorEl.style.background = 'var(--fg)';
+                    cursorEl.style.fontSize = '10px';
                   }
                 }
               }}>
