@@ -19,7 +19,8 @@
       "Bash(xargs grep *)",
       "Bash(node -c lib/projects.ts)",
       "Bash(git push *)",
-      "Bash(git diff *)"
+      "Bash(git diff *)",
+      "Bash(git show *)"
     ]
   }
 }
