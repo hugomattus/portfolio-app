@@ -48,6 +48,7 @@ export default function CustomCursor() {
           const workCard = element.classList.contains('work-card') ? element : element.closest('.work-card');
           if (workCard) {
             const isComingSoon = workCard.getAttribute('data-coming-soon') === 'true' || workCard.classList.contains('coming-soon');
+            console.log('Work card hover:', { element, workCard, isComingSoon, attr: workCard.getAttribute('data-coming-soon'), classList: workCard.className });
             setText(isComingSoon ? 'Em breve' : 'Ver');
           } else {
             setText('');
