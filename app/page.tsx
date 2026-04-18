@@ -23,37 +23,6 @@ export default function Home() {
     setAvailabilityDate(`${monthName} de ${year}`);
   }, [language]);
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let lastToggleTime = 0;
-    const throttle = 600;
-
-    const handleScroll = () => {
-      const now = Date.now();
-      if (now - lastToggleTime < throttle) return;
-
-      const currentScrollY = window.scrollY;
-      const isScrollingDown = currentScrollY > lastScrollY;
-
-      const videoElement = document.querySelector('.hero-video') as HTMLElement;
-      if (!videoElement) return;
-
-      const isExpanded = videoElement.classList.contains('expanded');
-
-      if (isScrollingDown && !isExpanded) {
-        videoElement.classList.add('expanded');
-        lastToggleTime = now;
-      } else if (!isScrollingDown && isExpanded) {
-        videoElement.classList.remove('expanded');
-        lastToggleTime = now;
-      }
-
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <>
