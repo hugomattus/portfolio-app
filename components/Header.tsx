@@ -185,8 +185,7 @@ export default function Header() {
                   width: '32px',
                   height: '32px',
                   transition: 'background-color 0.3s ease',
-                  marginLeft: '24px',
-                  transition: 'background-color 0.3s ease'
+                  marginLeft: '24px'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e5e5e5'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
