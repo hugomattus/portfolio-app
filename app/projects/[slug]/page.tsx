@@ -19,14 +19,14 @@ export default function ProjectPage() {
   const heroImageRef = useRef<HTMLImageElement>(null);
 
   const getProjectTranslation = (key: string) => {
-    const projectTranslations = translations[language as keyof typeof translations]?.projects?.[project?.slug as keyof any];
-    return projectTranslations?.[key as keyof typeof projectTranslations] || project?.[key as keyof Project];
+    const projectTranslations = (translations as any)[language]?.projects?.[project?.slug];
+    return projectTranslations?.[key] || (project as any)?.[key];
   };
 
   const getOtherProjectTranslation = (slug: string, key: string) => {
-    const projectTranslations = translations[language as keyof typeof translations]?.projects?.[slug as keyof any];
+    const projectTranslations = (translations as any)[language]?.projects?.[slug];
     const otherProject = allProjects?.find(p => p.slug === slug);
-    return projectTranslations?.[key as keyof typeof projectTranslations] || otherProject?.[key as keyof Project];
+    return projectTranslations?.[key] || (otherProject as any)?.[key];
   };
 
   useEffect(() => {
