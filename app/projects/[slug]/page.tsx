@@ -20,13 +20,13 @@ export default function ProjectPage() {
 
   const getProjectTranslation = (key: string) => {
     const projectTranslations = (translations as any)[language]?.projects?.[(project?.slug as any)];
-    return projectTranslations?.[key] || (project as any)?.[key];
+    return (projectTranslations as any)?.[key] || (project as any)?.[key];
   };
 
   const getOtherProjectTranslation = (slug: string, key: string) => {
-    const projectTranslations = (translations as any)[language]?.projects?.[slug];
+    const projectTranslations = (translations as any)[language]?.projects?.[slug as any];
     const otherProject = allProjects?.find(p => p.slug === slug);
-    return projectTranslations?.[key] || (otherProject as any)?.[key];
+    return (projectTranslations as any)?.[key] || (otherProject as any)?.[key];
   };
 
   useEffect(() => {
