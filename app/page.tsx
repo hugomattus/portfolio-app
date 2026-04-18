@@ -77,7 +77,7 @@ export default function Home() {
           </a>
         </div>
         <div className="hero-video">
-          <video width="1320" height="792" autoPlay muted loop playsInline preload="none">
+          <video width="1320" height="792" autoPlay muted loop playsInline fetchpriority="high" preload="auto">
             <source src="/assets/345137_medium.mp4" type="video/mp4" />
           </video>
         </div>
