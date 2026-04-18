@@ -19,7 +19,7 @@ export default function ProjectPage() {
   const heroImageRef = useRef<HTMLImageElement>(null);
 
   const getProjectTranslation = (key: string) => {
-    const projectTranslations = (translations as any)[language]?.projects?.[project?.slug];
+    const projectTranslations = (translations as any)[language]?.projects?.[(project?.slug as any)];
     return projectTranslations?.[key] || (project as any)?.[key];
   };
 
