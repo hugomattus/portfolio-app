@@ -84,7 +84,7 @@ export default function ProjectPage() {
             ✕
           </Link>
         </div>
-        <img ref={heroImageRef} src={project.images.hero} alt={project.title} className={isExiting ? 'hero-image-exit' : isReady ? 'hero-image-animate' : ''} style={{ width: '100%', height: '792px', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />
+        {project.images.hero && <img ref={heroImageRef} src={project.images.hero} alt={project.title} className={isExiting ? 'hero-image-exit' : isReady ? 'hero-image-animate' : ''} style={{ width: '100%', height: '792px', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />}
         <div className="project-grid-2col grid-2col">
           <div></div>
           <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -123,11 +123,13 @@ export default function ProjectPage() {
           </section>
         </div>
 
-        <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
-          {project.images.features.map((img, index) => (
-            <img key={index} src={img} alt={`Feature ${index + 1}`} className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
-          ))}
-        </div>
+        {project.images.features.some(img => img) && (
+          <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
+            {project.images.features.map((img, index) => (
+              img && <img key={index} src={img} alt={`Feature ${index + 1}`} className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
+            ))}
+          </div>
+        )}
 
         <div className="project-grid-2col grid-2col">
           <div></div>

@@ -18,7 +18,8 @@
       "Bash(grep -r \"#[0-9a-f]\\\\{6\\\\}\" app/projects/[slug]/page.tsx components/Header.tsx app/globals.css --color=never)",
       "Bash(xargs grep *)",
       "Bash(node -c lib/projects.ts)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git diff *)"
     ]
   }
 }
