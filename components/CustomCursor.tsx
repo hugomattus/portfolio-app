@@ -45,9 +45,9 @@ export default function CustomCursor() {
 
         const handleMouseEnter = () => {
           setIsActive(true);
-          const isWorkCard = element.classList.contains('work-card') || element.closest('.work-card');
-          if (isWorkCard) {
-            const isComingSoon = element.getAttribute('data-coming-soon') === 'true';
+          const workCard = element.classList.contains('work-card') ? element : element.closest('.work-card');
+          if (workCard) {
+            const isComingSoon = workCard.getAttribute('data-coming-soon') === 'true' || workCard.classList.contains('coming-soon');
             setText(isComingSoon ? 'Em breve' : 'Ver');
           } else {
             setText('');
