@@ -56,7 +56,7 @@ export const projects: Project[] = [
     designText: 'A fase de design focou na criação de fluxos claros e objetivos para dois perfis distintos: passageiros e motoristas. Desenvolvi wireframes para validar a arquitetura de informação e, em seguida, evoluí para interfaces visuais com foco em clareza, hierarquia e rapidez de interação. Também criei um design system base para garantir consistência entre os dois aplicativos.',
     finalTitle: 'Final',
     finalText: 'O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.'
-  }
+  },
   
   {
     id: 3,
