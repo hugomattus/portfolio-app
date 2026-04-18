@@ -20,7 +20,15 @@
       "Bash(node -c lib/projects.ts)",
       "Bash(git push *)",
       "Bash(git diff *)",
-      "Bash(git show *)"
+      "Bash(git show *)",
+      "Bash(grep -B 5 -E \"^\\\\s*[a-zA-Z]+:\\\\s*['\\\\\"].*['\\\\\"],?\\\\s*$\")",
+      "Bash(awk '/style={{/,/}}/')",
+      "Bash(awk '/style={{/,/}}/ {print}')",
+      "Bash(awk 'NR>1{if\\(prev == $0\\) print FILENAME\":\"NR-1\": DUPLICATE - \"$0; prev=$0; next} {prev=$0}')",
+      "Bash(awk -F: '{print $3}')",
+      "Bash(awk '$1 > 20 {print}')",
+      "Bash(grep -B1 \"^\\\\s*[a-zA-Z].*:\\\\s*['\\\\\"].*['\\\\\"],$\")",
+      "Bash(awk 'NR>1 && NF>0 && prev ~ /[a-zA-Z].*:.*/ && $0 ~ prev {print FILENAME\":\"NR\": LINHA DUPLICADA\"} {prev=$0}')"
     ]
   }
 }

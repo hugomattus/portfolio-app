@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingButton from "@/components/FloatingButton";
-import CustomCursor from "@/components/CustomCursor";
 import PageWrapper from "@/components/PageWrapper";
 import PageTransition from "@/components/PageTransition";
+
+const FloatingButton = dynamic(() => import("@/components/FloatingButton"), { ssr: false });
+const CustomCursor = dynamic(() => import("@/components/CustomCursor"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Hugo Mello — Freelancer Product Designer",
