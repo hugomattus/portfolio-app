@@ -73,6 +73,33 @@ a:hover {
   opacity: 1;
 }
 
+.work-card-hover-label {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.work-card:hover .work-card-hover-label {
+  opacity: 1;
+}
+
+.work-card-hover-label.active {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.work-card-hover-label.coming-soon {
+  background: rgba(255, 0, 0, 0.6);
+}
+
 .project-list-link:hover {
   opacity: 1;
 }

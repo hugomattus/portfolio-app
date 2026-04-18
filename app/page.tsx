@@ -88,7 +88,7 @@ export default function Home() {
         <div className="work-grid">
           {projects.map((project) => (
             <div key={project.id} className="work-card-wrapper" style={{ opacity: project.comingSoon ? 0.6 : 1 }}>
-              <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} title={project.comingSoon ? 'Em breve' : ''} className="work-card" style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto' }} onClick={(e) => project.comingSoon && e.preventDefault()}>
+              <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} className="work-card work-card-hover" style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto', position: 'relative' }} onClick={(e) => project.comingSoon && e.preventDefault()}>
                 <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
                   {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: project.comingSoon ? 'default' : 'pointer' }} onMouseEnter={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1.05)')} onMouseLeave={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1)')} />}
                   {project.comingSoon && (
@@ -96,6 +96,9 @@ export default function Home() {
                       Em breve
                     </div>
                   )}
+                  <div className={`work-card-hover-label ${project.comingSoon ? 'coming-soon' : 'active'}`}>
+                    {project.comingSoon ? 'Em breve' : 'Ver'}
+                  </div>
                 </div>
               </Link>
               <h3 className="work-card-title">{project.title}</h3>
