@@ -69,6 +69,14 @@ a:hover {
   opacity: 0.6;
 }
 
+.work-card:hover {
+  opacity: 1;
+}
+
+.project-list-link:hover {
+  opacity: 1;
+}
+
 /* Language transition */
 h1, h2, h3, p, span, button, a {
   transition: opacity 0.3s ease;
@@ -297,6 +305,7 @@ h1, h2, h3, p, span, button, a {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  animation: dropDown 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .availability {
@@ -304,6 +313,7 @@ h1, h2, h3, p, span, button, a {
   flex-direction: column;
   gap: 4px;
   text-align: right;
+  animation: dropDown 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .availability-status {
@@ -342,6 +352,7 @@ h1, h2, h3, p, span, button, a {
   white-space: nowrap;
   position: relative;
   padding-bottom: 8px;
+  animation: dropDown 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .contact-link::before {
@@ -391,6 +402,76 @@ h1, h2, h3, p, span, button, a {
   50% {
     opacity: 0.3;
   }
+}
+
+@keyframes heroImageEnter {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(45deg) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardStackEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-header-animate {
+  animation: dropDown 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.card-stack {
+  animation: cardStackEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes heroImageExit {
+  0% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-45deg) translateY(20px);
+  }
+}
+
+.hero-image-animate {
+  animation: heroImageEnter 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.hero-image-exit {
+  animation: heroImageExit 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+html.hero-animating {
+  overflow-x: hidden;
+}
+
+body.hero-animating {
+  overflow-x: hidden;
 }
 
 /* Floating Button */
@@ -458,6 +539,7 @@ h1, h2, h3, p, span, button, a {
   color: var(--fg);
   max-width: 56ch;
   line-height: 1.55;
+  animation: dropDown 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .hero-video {
@@ -535,9 +617,6 @@ h1, h2, h3, p, span, button, a {
   text-decoration: none;
 }
 
-.work-card:hover {
-  opacity: 0.8;
-}
 
 .work-card-title {
   font-size: 16px;
@@ -906,8 +985,20 @@ h1, h2, h3, p, span, button, a {
     grid-template-columns: 1fr !important;
   }
 
+  .project-grid-3col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-grid-3col img {
+    height: 400px !important;
+  }
+
   .project-grid-4img {
     grid-template-columns: 1fr !important;
+  }
+
+  .project-grid-4img img {
+    height: 350px !important;
   }
 
   .project-img-400 {
@@ -929,6 +1020,10 @@ h1, h2, h3, p, span, button, a {
 
   .project-header-section {
     padding-top: 32px !important;
+  }
+
+  .project-header-section img {
+    height: 300px !important;
   }
 
   .project-title {

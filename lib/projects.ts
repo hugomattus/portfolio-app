@@ -16,6 +16,14 @@ export interface Project {
   designText: string;
   finalTitle: string;
   finalText: string;
+  year?: string;
+  cover?: string;
+  thumbnail?: string;
+  images: {
+    hero: string;
+    features: string[];
+    results: string[];
+  };
 }
 
 export const projects: Project[] = [
@@ -37,6 +45,14 @@ export const projects: Project[] = [
     designText: 'Fizemos a criação de wireframes e protótipos para validar as ideias de design, garantindo que a experiência fosse intuitiva e centrada no usuário. Colaboramos estreitamente com os times de desenvolvimento e produto para iterar e refinar o design com base no feedback contínuo. Assim chegando a um resultado final que atendeu às necessidades dos usuários e aos objetivos do negócio.',
     finalTitle: 'Final',
     finalText: 'Ao final do projeto, entregamos uma experiência digital que foi bem recebida pelos usuários, resultando em um aumento significativo nas conversões e na satisfação do cliente. O produto se destacou no mercado por sua facilidade de uso e por atender às necessidades específicas dos usuários de tráfego pago, contribuindo para o sucesso geral do banco digital M5. Ainda estamos em processo de acompanhamento dos resultados e iterando com base no feedback dos usuários para continuar melhorando a experiência ao longo do tempo.',
+    year: '2026',
+    cover: '/assets/m5/Capa M5.png',
+    thumbnail: '/assets/m5/thumbail.png',
+    images: {
+      hero: '/assets/m5/Hero image Portifolio.png',
+      features: ['/assets/m5/Card 1.png', '/assets/m5/Card 2.png', '/assets/m5/Card 3.png'],
+      results: ['/assets/m5/Card maior 1.png', '/assets/m5/Card maior 2.png', '/assets/m5/Card maior 3.png', '/assets/m5/Card maior 4.png'],
+    },
   },
   {
     id: 2,
@@ -55,7 +71,13 @@ export const projects: Project[] = [
     designTitle: 'Design',
     designText: 'A fase de design focou na criação de fluxos claros e objetivos para dois perfis distintos: passageiros e motoristas. Desenvolvi wireframes para validar a arquitetura de informação e, em seguida, evoluí para interfaces visuais com foco em clareza, hierarquia e rapidez de interação. Também criei um design system base para garantir consistência entre os dois aplicativos.',
     finalTitle: 'Final',
-    finalText: 'O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.'
+    finalText: 'O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.',
+    year: '',
+    images: {
+      hero: '',
+      features: ['', '', ''],
+      results: ['', '', '', ''],
+    },
   },
   
   {
@@ -76,6 +98,12 @@ export const projects: Project[] = [
     designText: 'Texto sobre a fase de design do projeto',
     finalTitle: 'Final',
     finalText: 'Texto sobre a fase final do projeto',
+    year: '',
+    images: {
+      hero: '',
+      features: ['', '', ''],
+      results: ['', '', '', ''],
+    },
   },
   {
     id: 4,
@@ -95,6 +123,12 @@ export const projects: Project[] = [
     designText: 'Texto sobre a fase de design do projeto',
     finalTitle: 'Final',
     finalText: 'Texto sobre a fase final do projeto',
+    year: '',
+    images: {
+      hero: '',
+      features: ['', '', ''],
+      results: ['', '', '', ''],
+    },
   },
 ];
 

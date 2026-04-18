@@ -88,7 +88,9 @@ export default function Home() {
         <div className="work-grid">
           {projects.map((project) => (
             <div key={project.id} className="work-card-wrapper">
-              <Link href={`/projects/${project.slug}`} className="work-card"></Link>
+              <Link href={`/projects/${project.slug}`} className="work-card" style={{ overflow: 'hidden', borderRadius: '8px' }}>
+                {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />}
+              </Link>
               <h3 className="work-card-title">{project.title}</h3>
               <p className="work-card-description">{project.secondaryTitle}</p>
             </div>
