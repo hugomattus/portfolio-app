@@ -136,6 +136,7 @@ export const projects: Project[] = [
   },
 ];
 
+// Find a project by slug
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }
