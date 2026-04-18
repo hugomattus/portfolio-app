@@ -89,28 +89,26 @@ export default function Home() {
           {projects.map((project) => (
             <div key={project.id} className="work-card-wrapper" style={{ opacity: project.comingSoon ? 0.6 : 1 }}>
               <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} className="work-card" style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto' }} onClick={(e) => project.comingSoon && e.preventDefault()} onMouseEnter={(e) => {
-                const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
-                if (cursorEl) {
-                  cursorEl.textContent = project.comingSoon ? 'Em breve' : 'Ver';
-                  cursorEl.classList.add('active');
-                  if (project.comingSoon) {
+                if (project.comingSoon) {
+                  const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
+                  if (cursorEl) {
+                    cursorEl.textContent = 'Em breve';
+                    cursorEl.classList.add('active');
                     cursorEl.style.background = 'rgba(255, 0, 0, 0.8)';
-                  } else {
+                  }
+                }
+              }} onMouseLeave={(e) => {
+                if (project.comingSoon) {
+                  const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
+                  if (cursorEl) {
+                    cursorEl.textContent = '';
+                    cursorEl.classList.remove('active');
                     cursorEl.style.background = 'var(--fg)';
                   }
                 }
-                !project.comingSoon && (e.currentTarget.style.transform = 'scale(1.05)');
-              }} onMouseLeave={(e) => {
-                const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
-                if (cursorEl) {
-                  cursorEl.textContent = '';
-                  cursorEl.classList.remove('active');
-                  cursorEl.style.background = 'var(--fg)';
-                }
-                !project.comingSoon && (e.currentTarget.style.transform = 'scale(1)');
               }}>
                 <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
-                  {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: 'none' }} />}
+                  {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: 'pointer' }} onMouseEnter={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1.05)')} onMouseLeave={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1)')} />}
                   {project.comingSoon && (
                     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.4)', color: 'white', fontSize: '18px', fontWeight: 500 }}>
                       Em breve
