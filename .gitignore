@@ -43,3 +43,21 @@ next-env.d.ts
 # Instruções do Claude
 AGENTS.md
 CLAUDE.md
+
+# IDE e editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings
+.claude/
+*.local.json
+
+# OS específico
+.env.local
+.env.*.local
+.claude/settings.local.json
