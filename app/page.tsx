@@ -88,23 +88,7 @@ export default function Home() {
         <div className="work-grid">
           {projects.map((project) => (
             <div key={project.id} className="work-card-wrapper" style={{ opacity: project.comingSoon ? 0.6 : 1 }}>
-              <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} className="work-card" style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto' }} onClick={(e) => project.comingSoon && e.preventDefault()} onMouseEnter={(e) => {
-                if (project.comingSoon) {
-                  const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
-                  if (cursorEl) {
-                    cursorEl.textContent = 'Em breve';
-                    cursorEl.style.fontSize = '10px';
-                  }
-                }
-              }} onMouseLeave={(e) => {
-                if (project.comingSoon) {
-                  const cursorEl = document.querySelector('.custom-cursor') as HTMLElement;
-                  if (cursorEl) {
-                    cursorEl.textContent = '';
-                    cursorEl.style.fontSize = '10px';
-                  }
-                }
-              }}>
+              <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} className="work-card" data-coming-soon={project.comingSoon ? 'true' : 'false'} style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto' }} onClick={(e) => project.comingSoon && e.preventDefault()}>
                 <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
                   {project.cover && <img src={project.cover} alt={project.title} style={{ width: '100%', height: '400px', objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: 'pointer' }} onMouseEnter={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1.05)')} onMouseLeave={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1)')} />}
                   {project.comingSoon && (

@@ -46,7 +46,12 @@ export default function CustomCursor() {
         const handleMouseEnter = () => {
           setIsActive(true);
           const isWorkCard = element.classList.contains('work-card') || element.closest('.work-card');
-          setText(isWorkCard ? 'Ver' : '');
+          if (isWorkCard) {
+            const isComingSoon = element.getAttribute('data-coming-soon') === 'true';
+            setText(isComingSoon ? 'Em breve' : 'Ver');
+          } else {
+            setText('');
+          }
         };
 
         const handleMouseLeave = () => {
