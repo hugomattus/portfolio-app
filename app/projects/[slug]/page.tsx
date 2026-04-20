@@ -158,7 +158,7 @@ export default function ProjectPage() {
               )}
             </div>
           ))
-        ) : (
+          ) : (
           project.images.features.some(img => img) && (
             <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
               {project.images.features.map((img, index) => (
