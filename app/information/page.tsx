@@ -22,11 +22,9 @@ export default function Information() {
         <div className="info-right">
           <div className="info-block">
             <p>{translations[language].sobreText}</p>
-            <p style={{ marginTop: '16px' }}>
-              <a href="mailto:hugomattusdd@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                hugomattusdd@gmail.com
-              </a>
-            </p>
+            <nav className="social" style={{ marginTop: '16px' }}>
+              <a href="mailto:contatouxmello@gmail.com">contatouxmello@gmail.com</a>
+            </nav>
           </div>
 
           <div className="info-block">
