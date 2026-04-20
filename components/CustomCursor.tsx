@@ -2,9 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/lib/useLanguage';
 
 export default function CustomCursor() {
   const pathname = usePathname();
+  const { language } = useLanguage();
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isActive, setIsActive] = useState(false);
   const [text, setText] = useState('');
@@ -48,7 +50,11 @@ export default function CustomCursor() {
           const workCard = element.classList.contains('work-card') ? element : element.closest('.work-card');
           if (workCard) {
             const isComingSoon = workCard.classList.contains('coming-soon');
-            setText(isComingSoon ? 'Em breve' : 'Ver');
+            if (isComingSoon) {
+              setText(language === 'en' ? 'Coming soon' : 'Em breve');
+            } else {
+              setText(language === 'en' ? 'VIEW' : 'Ver');
+            }
           } else {
             setText('');
           }
