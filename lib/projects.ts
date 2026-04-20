@@ -106,8 +106,8 @@ export const projects: Project[] = [
         title: 'App do Motorista',
         description: 'O app de motoristas foi desenvolvido com foco em aceitar corridas rapidamente, gerenciar múltiplas solicitações e otimizar rotas. A interface prioriza informações essenciais e ações rápidas para maximizar a produtividade.',
         images: {
-          hero: '/assets/bora/Bora Motorista/Motorista 4.png',
-          features: ['/assets/bora/Bora Motorista/Motorista 1.png', '/assets/bora/Bora Motorista/Motorista 2.png', '/assets/bora/Bora Motorista/Motorista 3.png'],
+          hero: '',
+          features: ['/assets/bora/Bora Motorista/Motorista 1.png', '/assets/bora/Bora Motorista/Motorista 2.png', '/assets/bora/Bora Motorista/Motorista 3.png', '/assets/bora/Bora Motorista/Motorista 4.png'],
           results: ['/assets/bora/Bora Motorista/Motorista 5.png', '/assets/bora/Bora Motorista/Motorista 6.png', '/assets/bora/Bora Motorista/Motorista 7.png'],
         },
       },

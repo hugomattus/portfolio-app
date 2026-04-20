@@ -54,6 +54,16 @@ export const translations = {
         designText: "A fase de design focou na criação de fluxos claros e objetivos para dois perfis distintos: passageiros e motoristas. Desenvolvi wireframes para validar a arquitetura de informação e, em seguida, evoluí para interfaces visuais com foco em clareza, hierarquia e rapidez de interação. Também criei um design system base para garantir consistência entre os dois aplicativos.",
         finalTitle: "Final",
         finalText: "O Bora foi concebido como uma alternativa de mobilidade urbana adaptada para cidades menores, com foco em reduzir taxas para motoristas e aumentar a disponibilidade de corridas. A solução contempla dois aplicativos — passageiro e motorista — com suporte tanto para carro quanto moto, oferecendo uma experiência simples, acessível e alinhada à realidade local. O uso de IA no processo permitiu acelerar a prototipação e validar rapidamente fluxos e funcionalidades.",
+        apps: [
+          {
+            title: "App do Passageiro",
+            description: "A experiência do passageiro foi otimizada para simplicidade e rapidez. O fluxo permite solicitar uma corrida em poucos taps, visualizar o motorista em tempo real e avaliar a experiência após a conclusão.",
+          },
+          {
+            title: "App do Motorista",
+            description: "O app de motoristas foi desenvolvido com foco em aceitar corridas rapidamente, gerenciar múltiplas solicitações e otimizar rotas. A interface prioriza informações essenciais e ações rápidas para maximizar a produtividade.",
+          },
+        ],
       },
     },
   },
@@ -112,6 +122,16 @@ export const translations = {
         designText: "The design phase focused on creating clear and objective flows for two distinct profiles: passengers and drivers. I developed wireframes to validate information architecture and then evolved to visual interfaces focusing on clarity, hierarchy and speed of interaction. I also created a base design system to ensure consistency between the two applications.",
         finalTitle: "Final",
         finalText: "Bora was conceived as an urban mobility alternative adapted for smaller cities, with a focus on reducing fees for drivers and increasing availability of rides. The solution includes two applications — passenger and driver — with support for both cars and motorcycles, offering a simple, accessible experience aligned with local reality. The use of AI in the process made it possible to accelerate prototyping and quickly validate flows and features.",
+        apps: [
+          {
+            title: "Passenger App",
+            description: "The passenger experience was optimized for simplicity and speed. The flow allows you to request a ride in just a few taps, view the driver in real time and rate the experience after completion.",
+          },
+          {
+            title: "Driver App",
+            description: "The driver app was developed with a focus on accepting rides quickly, managing multiple requests and optimizing routes. The interface prioritizes essential information and quick actions to maximize productivity.",
+          },
+        ],
       },
     },
   },

@@ -53,7 +53,7 @@ export default function CustomCursor() {
             if (isComingSoon) {
               setText(language === 'en' ? 'Coming soon' : 'Em breve');
             } else {
-              setText(language === 'en' ? 'VIEW' : 'Ver');
+              setText(language === 'en' ? 'View' : 'Ver');
             }
           } else {
             setText('');

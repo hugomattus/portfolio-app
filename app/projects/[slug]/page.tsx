@@ -130,9 +130,9 @@ export default function ProjectPage() {
                 <div className="project-grid-2col grid-2col" style={{ marginTop: '80px' }}>
                   <div></div>
                   <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                    <h2 className="heading-section">{app.title}</h2>
+                    <h2 className="heading-section">{getProjectTranslation(`apps.${appIndex}.title`) || app.title}</h2>
                     {app.description && (
-                      <p className="paragraph-muted">{app.description}</p>
+                      <p className="paragraph-muted">{getProjectTranslation(`apps.${appIndex}.description`) || app.description}</p>
                     )}
                   </section>
                 </div>
