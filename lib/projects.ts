@@ -1,3 +1,13 @@
+export interface App {
+  title: string;
+  images: {
+    hero: string;
+    features: string[];
+    results: string[];
+  };
+  description?: string;
+}
+
 export interface Project {
   id: number;
   slug: string;
@@ -25,6 +35,7 @@ export interface Project {
     features: string[];
     results: string[];
   };
+  apps?: App[];
 }
 
 export const projects: Project[] = [
@@ -80,6 +91,26 @@ export const projects: Project[] = [
       features: ['/assets/bora/Card 1.png', '/assets/bora/Card 2.png', '/assets/bora/Card 3.png'],
       results: ['/assets/bora/Card maior 1.png', '/assets/bora/Card maior 2.png', '/assets/bora/Card maior 3.png', '/assets/bora/Card maior 4.png'],
     },
+    apps: [
+      {
+        title: 'App do Passageiro',
+        description: 'A experiência do passageiro foi otimizada para simplicidade e rapidez. O fluxo permite solicitar uma corrida em poucos taps, visualizar o motorista em tempo real e avaliar a experiência após a conclusão.',
+        images: {
+          hero: '/assets/bora/Capa hero.png',
+          features: ['/assets/bora/Card 1.png', '/assets/bora/Card 2.png', '/assets/bora/Card 3.png'],
+          results: ['/assets/bora/Card maior 1.png', '/assets/bora/Card maior 2.png', '/assets/bora/Card maior 3.png', '/assets/bora/Card maior 4.png'],
+        },
+      },
+      {
+        title: 'App do Motorista',
+        description: 'O app de motoristas foi desenvolvido com foco em aceitar corridas rapidamente, gerenciar múltiplas solicitações e otimizar rotas. A interface prioriza informações essenciais e ações rápidas para maximizar a produtividade.',
+        images: {
+          hero: '',
+          features: ['', '', ''],
+          results: ['', '', '', ''],
+        },
+      },
+    ],
   },
   
   {
