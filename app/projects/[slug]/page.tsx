@@ -126,38 +126,37 @@ export default function ProjectPage() {
         {project.apps && project.apps.length > 0 ? (
           project.apps.map((app, appIndex) => (
             <div key={appIndex}>
-                <div className="project-grid-2col grid-2col" style={{ marginTop: '80px' }}>
-                  <div></div>
-                  <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                    <h2 className="heading-section">{getProjectTranslation(`apps.${appIndex}.title`) || app.title}</h2>
-                    {app.description && (
-                      <p className="paragraph-muted">{getProjectTranslation(`apps.${appIndex}.description`) || app.description}</p>
-                    )}
-                  </section>
-                </div>
-
-                {app.images.hero && (
-                  <img src={app.images.hero} alt={app.title} style={{ width: '100%', height: '600px', objectFit: 'cover', borderRadius: '8px', marginTop: '80px' }} />
-                )}
-
-                {app.images.features.some(img => img) && (
-                  <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
-                    {app.images.features.map((img, index) => (
-                      img && <img key={index} src={img} alt={`${app.title} Feature ${index + 1}`} className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
-                    ))}
-                  </div>
-                )}
-
-                {app.images.results.some(img => img) && (
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
-                    <img src={app.images.results[0]} alt={`${app.title} Result 1`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
-                    {app.images.results[1] && <img src={app.images.results[1]} alt={`${app.title} Result 2`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
-                    {app.images.results[2] && <img src={app.images.results[2]} alt={`${app.title} Result 3`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
-                    {app.images.results[3] && <img src={app.images.results[3]} alt={`${app.title} Result 4`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />}
-                  </div>
-                )}
+              <div className="project-grid-2col grid-2col" style={{ marginTop: '80px' }}>
+                <div></div>
+                <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                  <h2 className="heading-section">{getProjectTranslation(`apps.${appIndex}.title`) || app.title}</h2>
+                  {app.description && (
+                    <p className="paragraph-muted">{getProjectTranslation(`apps.${appIndex}.description`) || app.description}</p>
+                  )}
+                </section>
               </div>
-            )
+
+              {app.images.hero && (
+                <img src={app.images.hero} alt={app.title} style={{ width: '100%', height: '600px', objectFit: 'cover', borderRadius: '8px', marginTop: '80px' }} />
+              )}
+
+              {app.images.features.some(img => img) && (
+                <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
+                  {app.images.features.map((img, index) => (
+                    img && <img key={index} src={img} alt={`${app.title} Feature ${index + 1}`} className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
+                  ))}
+                </div>
+              )}
+
+              {app.images.results.some(img => img) && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
+                  <img src={app.images.results[0]} alt={`${app.title} Result 1`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
+                  {app.images.results[1] && <img src={app.images.results[1]} alt={`${app.title} Result 2`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
+                  {app.images.results[2] && <img src={app.images.results[2]} alt={`${app.title} Result 3`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
+                  {app.images.results[3] && <img src={app.images.results[3]} alt={`${app.title} Result 4`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />}
+                </div>
+              )}
+            </div>
           ))
         ) : (
           project.images.features.some(img => img) && (
