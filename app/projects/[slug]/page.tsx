@@ -125,8 +125,7 @@ export default function ProjectPage() {
 
         {project.apps && project.apps.length > 0 ? (
           project.apps.map((app, appIndex) => (
-            app.images.hero && (
-              <div key={appIndex}>
+            <div key={appIndex}>
                 <div className="project-grid-2col grid-2col" style={{ marginTop: '80px' }}>
                   <div></div>
                   <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
