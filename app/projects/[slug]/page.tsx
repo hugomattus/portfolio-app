@@ -143,7 +143,7 @@ export default function ProjectPage() {
               {app.images.features.some(img => img) && (
                 <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
                   {app.images.features.map((img, index) => (
-                    img && <img key={index} src={img} alt={`${app.title} Feature ${index + 1}`} className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
+                    img && <img key={index} src={img} alt={`${app.title} Feature ${index + 1}`} className="card-stack" style={{ width: '100%', height: index === 0 ? '600px' : '704px', borderRadius: '8px', objectFit: 'cover', gridColumn: index === 0 ? '1 / -1' : 'auto' }} />
                   ))}
                 </div>
               )}
