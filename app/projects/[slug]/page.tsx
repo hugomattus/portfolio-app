@@ -18,9 +18,13 @@ export default function ProjectPage() {
   const [isExiting, setIsExiting] = useState(false);
   const heroImageRef = useRef<HTMLImageElement>(null);
 
+  const getNestedValue = (obj: any, path: string) => {
+    return path.split('.').reduce((acc, part) => acc?.[part], obj);
+  };
+
   const getProjectTranslation = (key: string) => {
     const projectTranslations = (translations as any)[language]?.projects?.[(project?.slug as any)];
-    return (projectTranslations as any)?.[key] || (project as any)?.[key];
+    return getNestedValue(projectTranslations, key) || getNestedValue(project, key);
   };
 
   const getOtherProjectTranslation = (slug: string, key: string) => {
