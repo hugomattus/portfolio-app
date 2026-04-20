@@ -662,7 +662,6 @@ body.hero-animating {
   list-style: none;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--rule);
 }
 
 .plain-list li {
@@ -683,7 +682,6 @@ body.hero-animating {
 .experience-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--rule);
 }
 
 .experience-item {
