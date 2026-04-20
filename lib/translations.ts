@@ -20,6 +20,7 @@ export const translations = {
     interacao: "Interação & Prototipagem",
     pesquisa: "Pesquisa & Estratégia",
     redesSociais: "Redes Sociais",
+    copyright: "© Todos os direitos reservados a Hugo Mello",
     projects: {
       M5: {
         title: "M5",
@@ -88,6 +89,7 @@ export const translations = {
     interacao: "Interaction & Prototyping",
     pesquisa: "Research & Strategy",
     redesSociais: "Social Media",
+    copyright: "© All rights reserved to Hugo Mello",
     projects: {
       M5: {
         title: "M5",

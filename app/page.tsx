@@ -11,6 +11,11 @@ export default function Home() {
   const [availabilityDate, setAvailabilityDate] = useState('');
   const projects = getAllProjects();
 
+  const getProjectTranslation = (slug: string, key: string) => {
+    const projectTranslations = (translations as any)[language]?.projects?.[slug];
+    return (projectTranslations as any)?.[key] || (projects.find(p => p.slug === slug) as any)?.[key];
+  };
+
   const months = {
     pt: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
     en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -67,8 +72,8 @@ export default function Home() {
                   )}
                 </div>
               </Link>
-              <h3 className="work-card-title">{project.title}</h3>
-              <p className="work-card-description">{project.secondaryTitle}</p>
+              <h3 className="work-card-title">{getProjectTranslation(project.slug, 'title')}</h3>
+              <p className="work-card-description">{getProjectTranslation(project.slug, 'secondaryTitle')}</p>
             </div>
           ))}
         </div>

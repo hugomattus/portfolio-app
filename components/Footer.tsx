@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-copyright">
-        <span>© Todos os direitos reservados a Hugo Mello</span>
+        <span>{translations[language].copyright}</span>
         <span>{new Date().getFullYear()}</span>
       </div>
     </>
