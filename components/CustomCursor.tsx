@@ -32,6 +32,21 @@ export default function CustomCursor() {
     setText('');
   }, [pathname]);
 
+  // Update text when language changes
+  useEffect(() => {
+    if (isActive) {
+      const activeElement = document.querySelector('.work-card:hover') || document.querySelector('[role="button"]:hover');
+      if (activeElement) {
+        const isComingSoon = activeElement.classList.contains('coming-soon');
+        if (isComingSoon) {
+          setText(language === 'en' ? 'Coming soon' : 'Em breve');
+        } else {
+          setText(language === 'en' ? 'View' : 'Ver');
+        }
+      }
+    }
+  }, [language, isActive]);
+
   useEffect(() => {
     if (!isMounted) return;
 

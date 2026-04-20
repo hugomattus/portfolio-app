@@ -97,7 +97,7 @@ export const projects: Project[] = [
         title: 'App do Passageiro',
         description: 'A experiência do passageiro foi otimizada para simplicidade e rapidez. O fluxo permite solicitar uma corrida em poucos taps, visualizar o motorista em tempo real e avaliar a experiência após a conclusão.',
         images: {
-          hero: '/assets/bora/Capa hero.png',
+          hero: '',
           features: ['/assets/bora/Card 1.png', '/assets/bora/Card 2.png', '/assets/bora/Card 3.png'],
           results: ['/assets/bora/Card maior 1.png', '/assets/bora/Card maior 2.png', '/assets/bora/Card maior 3.png', '/assets/bora/Card maior 4.png'],
         },
