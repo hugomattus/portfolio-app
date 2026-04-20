@@ -149,7 +149,7 @@ export default function ProjectPage() {
               )}
 
               {app.images.results.some(img => img) && (
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
                   <img src={app.images.results[0]} alt={`${app.title} Result 1`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
                   {app.images.results[1] && <img src={app.images.results[1]} alt={`${app.title} Result 2`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
                   {app.images.results[2] && <img src={app.images.results[2]} alt={`${app.title} Result 3`} className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
