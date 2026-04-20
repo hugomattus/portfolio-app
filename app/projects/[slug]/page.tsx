@@ -138,7 +138,7 @@ export default function ProjectPage() {
                 </div>
 
                 {app.images.hero && (
-                  <img src={app.images.hero} alt={app.title} style={{ width: '100%', height: '792px', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />
+                  <img src={app.images.hero} alt={app.title} style={{ width: '100%', height: '600px', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />
                 )}
 
                 {app.images.features.some(img => img) && (
