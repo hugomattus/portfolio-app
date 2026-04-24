@@ -29,7 +29,9 @@ export interface Project {
   year?: string;
   comingSoon?: boolean;
   cover?: string;
+  liveLink?: string;
   thumbnail?: string;
+  introImage?: string;
   images: {
     hero: string;
     features: string[];
@@ -119,22 +121,24 @@ export const projects: Project[] = [
     slug: 'Freela',
     title: 'Freela',
     secondaryTitle: 'Plataforma de Freelancers',
-    description: 'Plataforma que conecta clientes a freelancers qualificados para realizar projetos de design, desenvolvimento e outras áreas criativas.',
+    description: 'Plataforma que ajuda freelancers a organizar suas vidas profissionais, centralizando gestão de projetos, clientes, propostas e finanças em um único lugar.',
     client: 'Freela',
     role: 'Product Designer',
     service: 'Product Design + Interaction',
-    myRoleDescription: 'Atuei como Product Designer liderando o design de dois ambientes principais: a landing page para clientes e o dashboard para freelancers, garantindo experiências intuitivas e alinhadas com as necessidades de cada usuário.',
-    myRoleIncluded: ['Pesquisa', 'Wireframes', 'User Flow', 'Design System', 'UI Design', 'Prototipação', 'Design de Dashboard'],
-    resultsDescription: 'Uma plataforma completa que facilita a conexão entre clientes que procuram serviços criativos e freelancers qualificados, com interfaces otimizadas para cada tipo de usuário.',
+    myRoleDescription: 'Atuei como Product Designer liderando o design da plataforma Freela. Com suporte de Claude AI para prototipação, ideação e arquitetura de informação, desenvolvi interfaces e estratégias de comunicação que transformam dores abstratas (desorganização, falta de tempo) em benefícios concretos que ressoam com o público-alvo. O foco foi criar uma experiência intuitiva e eficiente, que realmente ajude freelancers a organizar suas vidas profissionais, centralizando gestão de projetos, clientes, propostas e finanças em um único lugar.',
+    myRoleIncluded: ['Pesquisa', 'Arquitetura de Informação', 'Wireframes', 'User Flow', 'Design System', 'UI Design', 'Testes de usabilidade', 'Prototipação (com Claude AI)'],
+    resultsDescription: 'Uma plataforma completa e visualmente atrativa que facilita a organização da vida profissional do freelancer, com interfaces otimizadas para cada contexto de uso, reduzindo tempo de administração e aumentando confiança nas decisões financeiras e operacionais.',
     discoveryTitle: 'Descoberta',
-    discoveryText: 'Identificamos a oportunidade de criar uma plataforma que simplificasse a conexão entre clientes e freelancers, resolvendo dores como falta de confiança, dificuldade em encontrar profissionais qualificados e comunicação desorganizada.',
+    discoveryText: 'Identificamos que freelancers enfrentam dores críticas: desorganização (planilhas, e-mails e apps espalhados), dificuldade em medir tempo gasto por projeto, falta de transparência financeira e desperdício de 10-15 horas/mês apenas organizando. A oportunidade era criar uma plataforma que centralizasse tudo isso de forma simples, comunicando claramente como resolve esses problemas reais.',
     designTitle: 'Design',
-    designText: 'Desenvolvemos duas experiências distintas: uma landing page atrativa para clientes descobrirem e contratarem freelancers, e um dashboard poderoso para freelancers gerenciarem seus projetos, propostas e ganhos.',
+    designText: 'Desenvolvemos a plataforma com arquitetura de informação hierárquica que guia o usuário através de uma jornada progressiva: do primeiro contato até a utilização diária. A interface é projetada em camadas que apresentam o benefício central com narrativa clara, demonstração funcional através de componentes interativos que permitem exploração, e validação social através de depoimentos e métricas que estabelecem credibilidade. A estrutura visual prioriza contraste e clareza nos elementos de ação com repetição estratégica em múltiplos pontos da jornada. O sistema de design é coeso com componentes reutilizáveis que garantem consistência visual em todos os contextos. A navegação utiliza padrões intuitivos com sidebar colapsível e topbar contextual que mantém o usuário orientado. Implementamos múltiplas configurações de densidade visual e temas que se adaptam a preferências individuais, garantindo que cada freelancer encontre uma experiência que funcione para seu fluxo de trabalho. Os fluxos de interação foram projetados para minimizar atrito: acesso rápido a informações críticas, hierarquia clara de onde clicar, feedback visual consistente em cada ação e layout responsivo que funciona igualmente bem em qualquer dispositivo. Prototipação iterativa com Claude AI validou arquitetura de informação, fluxos de usuário e padrões de interação, garantindo uma experiência intuitiva e eficiente do primeiro clique até o uso diário.',
     finalTitle: 'Final',
-    finalText: 'O resultado é uma plataforma funcional e visualmente atrativa que serve como ponte entre demanda e oferta de serviços criativos, facilitando negócios e relacionamentos profissionais.',
-    year: '2026',
+    finalText: 'O resultado é uma plataforma que comunica valor desde o primeiro contato e o reforça diariamente através de uma experiência organizada e intuitiva. A hierarquia visual clara permite que cada tipo de usuário encontre rapidamente o que procura, seja descobrindo a plataforma ou gerenciando seu negócio. A plataforma transforma informação caótica em visão clara. O freelancer consegue entender a saúde do seu negócio em segundos: quanto faturou, quantos projetos estão em andamento, próximos vencimentos e quanto lucrou de verdade. Cada interação é intuitiva, cada dado é compreensível rapidamente, e cada configuração oferece flexibilidade. O mais importante: Freela comunica não só O QUE faz, mas POR QUE isso importa para o freelancer que está perdendo horas com organização. O resultado final é uma ferramenta que não apenas organiza informações, mas devolve confiança e clareza nas decisões operacionais e financeiras, recuperando tempo precioso para o trabalho criativo que realmente importa.',
+    year: '2025',
+    liveLink: 'https://freela-lime.vercel.app/',
     cover: '/assets/Freela/Capa.png',
-    thumbnail: '/assets/Freela/Capa.png',
+    thumbnail: '/assets/Freela/capa menor.png',
+    introImage: '/assets/Freela/card 1 results.png',
     images: {
       hero: '/assets/Freela/Capa.png',
       features: ['', '', ''],
@@ -143,7 +147,7 @@ export const projects: Project[] = [
     apps: [
       {
         title: 'Landing Page',
-        description: 'A landing page foi criada para clientes descobrirem freelancers qualificados, visualizar portfolios, ler avaliações e iniciar projetos de forma simples e intuitiva.',
+        description: 'A landing page comunica claramente o valor do Freela através de uma narrativa progressiva. Guia o visitante do problema até a solução, oferecendo múltiplos pontos de entrada para conversão. Resultado: visitantes entendem rapidamente o benefício e se convertem em usuários cadastrados através de uma experiência fluida e convincente.',
         images: {
           hero: '',
           features: ['', '', ''],
@@ -151,8 +155,8 @@ export const projects: Project[] = [
         },
       },
       {
-        title: 'Dashboard do Freelancer',
-        description: 'O dashboard oferece aos freelancers ferramentas para gerenciar propostas, acompanhar projetos em andamento, receber pagamentos e manter histórico de trabalhos realizados.',
+        title: 'Dashboard',
+        description: ' dashboard centraliza todas as informações críticas em uma única interface intuitiva. O freelancer consegue visualizar receita, projetos ativos, próximos vencimentos e lucro em segundos sem precisar navegar por múltiplas abas. Resultado: redução significativa de tempo em organização administrativa e maior confiança nas decisões financeiras.',
         images: {
           hero: '',
           features: ['', '', ''],

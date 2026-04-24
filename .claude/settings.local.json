@@ -30,7 +30,10 @@
       "Bash(grep -B1 \"^\\\\s*[a-zA-Z].*:\\\\s*['\\\\\"].*['\\\\\"],$\")",
       "Bash(awk 'NR>1 && NF>0 && prev ~ /[a-zA-Z].*:.*/ && $0 ~ prev {print FILENAME\":\"NR\": LINHA DUPLICADA\"} {prev=$0}')",
       "Bash(grep -E \"\\\\.\\(tsx|ts|jsx|js\\)$\")",
-      "Bash(npx skills *)"
+      "Bash(npx skills *)",
+      "Bash(curl *)",
+      "Bash(identify \"C:\\\\Users\\\\Hugo\\\\Desktop\\\\portfolio-app\\\\public\\\\assets\\\\Freela\\\\Capa.png\")",
+      "PowerShell(Stop-Process *)"
     ]
   }
 }

@@ -108,6 +108,14 @@ export default function ProjectPage() {
               <div>
                 <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '4px' }}>{language === 'pt' ? 'SERVIÇO' : 'SERVICE'}</p>
                 <p style={{ fontSize: '16px', color: 'var(--fg)' }}>{getProjectTranslation('service')}</p>
+                {(project as any).liveLink && (
+                  <div style={{ marginTop: '80px' }}>
+                    <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '4px' }}>{language === 'pt' ? 'PROJETO AO VIVO' : 'LIVE PROJECT'}</p>
+                    <a href={(project as any).liveLink} target="_blank" rel="noopener noreferrer" className="contact-link">
+                      {language === 'pt' ? 'Veja agora' : 'View now'}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
             <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginTop: '80px' }}>
@@ -127,6 +135,10 @@ export default function ProjectPage() {
           </section>
         </div>
 
+        {(project as any).introImage && (
+          <img src={(project as any).introImage} alt="Project intro" style={{ width: '100%', height: '600px', objectFit: 'cover', borderRadius: '8px', marginTop: '80px' }} />
+        )}
+
         {project.apps && project.apps.length > 0 ? (
           project.apps.map((app, appIndex) => (
             <div key={appIndex}>
@@ -139,6 +151,19 @@ export default function ProjectPage() {
                   )}
                 </section>
               </div>
+
+              {slug === 'Freela' && appIndex === 0 && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
+                  <img src="/assets/Freela/Card 2 results.png" alt={`${app.title} Result 1`} className="card-stack" style={{ width: '100%', borderRadius: '8px', gridColumn: '1 / -1' }} />
+                </div>
+              )}
+
+              {slug === 'Freela' && appIndex === 1 && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
+                  <img src="/assets/Freela/card 4 results.png" alt="Dashboard Result" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
+                  <img src="/assets/Freela/card 3 results.png" alt="Dashboard Result" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
+                </div>
+              )}
 
               {app.images.hero && (
                 <img src={app.images.hero} alt={app.title} style={{ width: '100%', height: '600px', objectFit: 'cover', borderRadius: '8px', marginTop: '80px' }} />
@@ -190,14 +215,14 @@ export default function ProjectPage() {
 
               <div>
                 <h3 className="heading-subsection">{getProjectTranslation('designTitle')}</h3>
-                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
                   {getProjectTranslation('designText')}
                 </p>
               </div>
 
               <div>
                 <h3 className="heading-subsection">{getProjectTranslation('finalTitle')}</h3>
-                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
                   {getProjectTranslation('finalText')}
                 </p>
               </div>
