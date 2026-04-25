@@ -41,7 +41,8 @@ export default function ProjectPage() {
     const fileNameWithoutExt = fileName.replace('.png', '');
     const mobileFile = `${fileNameWithoutExt} mobile.png`;
     const mobilePath = `${folder}/${mobileFile}`;
-    return { mobile: mobilePath, desktop: imagePath };
+    const encodeUrl = (path: string) => path.replace(/ /g, '%20');
+    return { mobile: encodeUrl(mobilePath), desktop: encodeUrl(imagePath) };
   };
 
   useEffect(() => {
@@ -172,11 +173,11 @@ export default function ProjectPage() {
 
               {slug === 'Freela' && appIndex === 1 && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 4 results.png'); return <picture><source media="(max-width: 600px)" srcSet={paths.mobile} /><img src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} /></picture>; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 3 results.png'); return <picture><source media="(max-width: 600px)" srcSet={paths.mobile} /><img src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} /></picture>; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 5 results.png'); return <picture><source media="(max-width: 600px)" srcSet={paths.mobile} /><img src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} /></picture>; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 6 results.png'); return <picture><source media="(max-width: 600px)" srcSet={paths.mobile} /><img src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} /></picture>; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 7 results.png'); return <picture><source media="(max-width: 600px)" srcSet={paths.mobile} /><img src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} /></picture>; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 4 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 3 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 5 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 6 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 7 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
                 </div>
               )}
 
@@ -188,7 +189,7 @@ export default function ProjectPage() {
                 <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
                   {app.images.features.map((img, index) => {
                     const paths = getResponsiveImagePath(img);
-                    return img && <picture key={index}><source media="(max-width: 600px)" srcSet={paths.mobile} /><img src={paths.desktop} alt={`${app.title} Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} /></picture>;
+                    return img && <img key={index} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt={`${app.title} Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />;
                   })}
                 </div>
               )}
@@ -197,19 +198,19 @@ export default function ProjectPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
                   {(() => {
                     const paths0 = getResponsiveImagePath(app.images.results[0]);
-                    return <picture><source media="(max-width: 600px)" srcSet={paths0.mobile} /><img src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} /></picture>;
+                    return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />;
                   })()}
                   {app.images.results[1] && (() => {
                     const paths1 = getResponsiveImagePath(app.images.results[1]);
-                    return <picture><source media="(max-width: 600px)" srcSet={paths1.mobile} /><img src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} /></picture>;
+                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />;
                   })()}
                   {app.images.results[2] && (() => {
                     const paths2 = getResponsiveImagePath(app.images.results[2]);
-                    return <picture><source media="(max-width: 600px)" srcSet={paths2.mobile} /><img src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} /></picture>;
+                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />;
                   })()}
                   {app.images.results[3] && (() => {
                     const paths3 = getResponsiveImagePath(app.images.results[3]);
-                    return <picture><source media="(max-width: 600px)" srcSet={paths3.mobile} /><img src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} /></picture>;
+                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />;
                   })()}
                 </div>
               )}
