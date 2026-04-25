@@ -1031,6 +1031,8 @@ body.hero-animating {
   }
 
   .grid-2col {
+    display: flex !important;
+    flex-direction: column !important;
     gap: 32px !important;
     margin-top: 48px !important;
   }
