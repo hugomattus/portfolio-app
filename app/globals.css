@@ -987,7 +987,7 @@ body.hero-animating {
   }
 
   .project-grid-3col img {
-    height: 600px !important;
+    height: auto !important;
   }
 
   .project-grid-4img {
