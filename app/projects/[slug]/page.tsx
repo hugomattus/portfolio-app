@@ -100,7 +100,13 @@ export default function ProjectPage() {
             ✕
           </Link>
         </div>
-        {project.images.hero && <Image ref={heroImageRef} src={project.images.hero} alt={project.title} width={1200} height={792} priority sizes="(max-width: 768px) 100vw, 1200px" className={isExiting ? 'hero-image-exit' : isReady ? 'hero-image-animate' : ''} style={{ width: '100%', height: 'clamp(300px, 100vw * 0.56, 792px)', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />}
+        {project.images.hero && (() => {
+          if (slug === 'Freela') {
+            const paths = getResponsiveImagePath(project.images.hero);
+            return <Image ref={heroImageRef} src={paths.desktop} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} alt={project.title} width={1200} height={792} priority sizes="(max-width: 600px) 100vw, 1200px" className={isExiting ? 'hero-image-exit' : isReady ? 'hero-image-animate' : ''} style={{ width: '100%', height: 'clamp(300px, 100vw * 0.56, 792px)', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />;
+          }
+          return <Image ref={heroImageRef} src={project.images.hero} alt={project.title} width={1200} height={792} priority sizes="(max-width: 768px) 100vw, 1200px" className={isExiting ? 'hero-image-exit' : isReady ? 'hero-image-animate' : ''} style={{ width: '100%', height: 'clamp(300px, 100vw * 0.56, 792px)', objectFit: 'cover', borderRadius: '8px', marginTop: '32px' }} />;
+        })()}
         <div className="project-grid-2col grid-2col">
           <div></div>
           <section className="card-stack" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
