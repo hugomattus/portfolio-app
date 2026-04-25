@@ -22,6 +22,8 @@ export default function RootLayout({
         <meta name="google" content="notranslate" />
         <link rel="icon" href="/assets/Favicon.png" />
         <link rel="preconnect" href="https://api.fontshare.com" />
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
+        <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap" />
         <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap" rel="stylesheet" />
       </head>
       <body suppressHydrationWarning>
