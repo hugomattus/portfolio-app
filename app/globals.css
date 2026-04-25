@@ -1017,8 +1017,27 @@ body.hero-animating {
     margin-right: 8px !important;
   }
 
+  .project-wrapper {
+    gap: 48px !important;
+  }
+
   .project-header-section {
     padding-top: 32px !important;
+    gap: 16px !important;
+  }
+
+  .card-stack {
+    gap: 16px !important;
+  }
+
+  .grid-2col {
+    gap: 32px !important;
+    margin-top: 48px !important;
+  }
+
+  .project-grid-3col {
+    gap: 16px !important;
+    margin-top: 48px !important;
   }
 
   .project-header-section img {
