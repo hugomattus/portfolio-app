@@ -985,13 +985,11 @@ body.hero-animating {
   .project-grid-3col {
     display: flex !important;
     flex-direction: column !important;
-    gap: 16px !important;
   }
 
   .project-grid-3col img {
     width: 100% !important;
-    height: 600px !important;
-    object-fit: cover !important;
+    height: auto !important;
   }
 
   .project-grid-4img {
