@@ -221,9 +221,10 @@ export default function ProjectPage() {
         ) : (
           project.images.features.some(img => img) && (
             <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
-              {project.images.features.map((img, index) => (
-                img && <img key={index} src={img} alt={`Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
-              ))}
+              {project.images.features.map((img, index) => {
+                const paths = getResponsiveImagePath(img);
+                return img && <img key={index} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt={`Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />;
+              })}
             </div>
           )
         )}
@@ -263,11 +264,23 @@ export default function ProjectPage() {
         </div>
 
         {!project.apps && (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
-            <img src={project.images.results[0]} alt="Result 1" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
-            <img src={project.images.results[1]} alt="Result 2" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src={project.images.results[2]} alt="Result 3" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src={project.images.results[3]} alt="Result 4" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
+          <div className="grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
+            {(() => {
+              const paths0 = getResponsiveImagePath(project.images.results[0]);
+              return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths0.desktop} alt="Result 1" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />;
+            })()}
+            {project.images.results[1] && (() => {
+              const paths1 = getResponsiveImagePath(project.images.results[1]);
+              return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths1.desktop} alt="Result 2" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />;
+            })()}
+            {project.images.results[2] && (() => {
+              const paths2 = getResponsiveImagePath(project.images.results[2]);
+              return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths2.desktop} alt="Result 3" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />;
+            })()}
+            {project.images.results[3] && (() => {
+              const paths3 = getResponsiveImagePath(project.images.results[3]);
+              return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths3.desktop} alt="Result 4" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />;
+            })()}
           </div>
         )}
       </div>
