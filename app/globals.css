@@ -990,7 +990,8 @@ body.hero-animating {
 
   .project-grid-3col img {
     width: 100% !important;
-    height: 300px !important;
+    height: 600px !important;
+    object-fit: cover !important;
   }
 
   .project-grid-4img {
