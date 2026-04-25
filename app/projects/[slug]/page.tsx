@@ -195,7 +195,7 @@ export default function ProjectPage() {
               )}
 
               {app.images.results.some(img => img) && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
                   {(() => {
                     const paths0 = getResponsiveImagePath(app.images.results[0]);
                     return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: '1 / -1' }} />;
