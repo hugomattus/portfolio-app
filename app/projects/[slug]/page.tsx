@@ -173,11 +173,11 @@ export default function ProjectPage() {
 
               {slug === 'Freela' && appIndex === 1 && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 4 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 3 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 5 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 6 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
-                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 7 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 4 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 3 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 5 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 6 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 7 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
                 </div>
               )}
 
@@ -189,7 +189,7 @@ export default function ProjectPage() {
                 <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
                   {app.images.features.map((img, index) => {
                     const paths = getResponsiveImagePath(img);
-                    return img && <img key={index} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt={`${app.title} Feature ${index + 1}`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px',  }} />;
+                    return img && <img key={index} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt={`${app.title} Feature ${index + 1}`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px',  }} />;
                   })}
                 </div>
               )}
@@ -198,19 +198,19 @@ export default function ProjectPage() {
                 <div className="grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '80px' }}>
                   {(() => {
                     const paths0 = getResponsiveImagePath(app.images.results[0]);
-                    return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
+                    return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
                   })()}
                   {app.images.results[1] && (() => {
                     const paths1 = getResponsiveImagePath(app.images.results[1]);
-                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: '1 / -1' }} />;
+                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: '1 / -1' }} />;
                   })()}
                   {app.images.results[2] && (() => {
                     const paths2 = getResponsiveImagePath(app.images.results[2]);
-                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
+                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
                   })()}
                   {app.images.results[3] && (() => {
                     const paths3 = getResponsiveImagePath(app.images.results[3]);
-                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
+                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
                   })()}
                 </div>
               )}
