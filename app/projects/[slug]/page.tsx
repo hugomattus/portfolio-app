@@ -163,6 +163,9 @@ export default function ProjectPage() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
                   <img src="/assets/Freela/card 4 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
                   <img src="/assets/Freela/card 3 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
+                  <img src="/assets/Freela/card 5 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
+                  <img src="/assets/Freela/card 6 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
+                  <img src="/assets/Freela/card 7 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
                 </div>
               )}
 
