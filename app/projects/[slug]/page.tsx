@@ -202,11 +202,11 @@ export default function ProjectPage() {
                   })()}
                   {app.images.results[1] && (() => {
                     const paths1 = getResponsiveImagePath(app.images.results[1]);
-                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: '1 / -1' }} />;
+                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
                   })()}
                   {app.images.results[2] && (() => {
                     const paths2 = getResponsiveImagePath(app.images.results[2]);
-                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: '1 / -1' }} />;
+                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
                   })()}
                   {app.images.results[3] && (() => {
                     const paths3 = getResponsiveImagePath(app.images.results[3]);
