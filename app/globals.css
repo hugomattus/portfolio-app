@@ -983,14 +983,14 @@ body.hero-animating {
   }
 
   .project-grid-3col {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
   }
 
   .project-grid-3col img {
-    height: auto !important;
-    max-width: 360px !important;
-    margin: 0 auto !important;
-    display: block !important;
+    width: 100% !important;
+    height: 300px !important;
   }
 
   .project-grid-4img {
