@@ -982,11 +982,6 @@ body.hero-animating {
     grid-template-columns: 1fr !important;
   }
 
-  [style*="gridTemplateColumns"] {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
   .project-grid-3col {
     display: flex !important;
     flex-direction: column !important;
