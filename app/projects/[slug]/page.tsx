@@ -202,7 +202,8 @@ export default function ProjectPage() {
                   })()}
                   {app.images.results[1] && (() => {
                     const paths1 = getResponsiveImagePath(app.images.results[1]);
-                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: '1 / -1' }} />;
+                    const isMotorista = appIndex === 1;
+                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: isMotorista ? '1 / -1' : 'auto' }} />;
                   })()}
                   {app.images.results[2] && (() => {
                     const paths2 = getResponsiveImagePath(app.images.results[2]);
@@ -210,7 +211,8 @@ export default function ProjectPage() {
                   })()}
                   {app.images.results[3] && (() => {
                     const paths3 = getResponsiveImagePath(app.images.results[3]);
-                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />;
+                    const isMotorista = appIndex === 1;
+                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '8px', gridColumn: isMotorista ? 'auto' : '1 / -1' }} />;
                   })()}
                 </div>
               )}
