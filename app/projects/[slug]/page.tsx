@@ -41,7 +41,7 @@ export default function ProjectPage() {
     const fileNameWithoutExt = fileName.replace('.png', '');
     const mobileFile = `${fileNameWithoutExt} mobile.png`;
     const mobilePath = `${folder}/${mobileFile}`;
-    return `"${mobilePath}" 360w, "${imagePath}" 1256w`;
+    return `"${mobilePath}" 600w, "${imagePath}" 1256w`;
   };
 
   useEffect(() => {
