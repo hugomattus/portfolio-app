@@ -1042,12 +1042,36 @@ body.hero-animating {
     margin-top: 48px !important;
   }
 
+  .card-stack {
+    animation: none !important;
+  }
+
+  .hero-image-animate {
+    animation: none !important;
+  }
+
+  .hero-image-exit {
+    animation: none !important;
+  }
+
   .project-header-section img {
     height: auto !important;
   }
 
   .project-title {
     font-size: 20px !important;
+  }
+
+  /* Remove hovers and transitions from images on mobile */
+  img {
+    transition: none !important;
+  }
+
+  .contact-link:hover::before,
+  .contact-link:hover::after,
+  .floating-button:hover,
+  .floating-button:hover .floating-arrow {
+    transform: none !important;
   }
 
   /* Footer mobile */
