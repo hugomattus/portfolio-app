@@ -189,7 +189,7 @@ export default function ProjectPage() {
                 <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
                   {app.images.features.map((img, index) => {
                     const paths = getResponsiveImagePath(img);
-                    return img && <img key={index} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt={`${app.title} Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'contain' }} />;
+                    return img && <img key={index} srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths.desktop} alt={`${app.title} Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'contain' }} />;
                   })}
                 </div>
               )}
@@ -198,19 +198,19 @@ export default function ProjectPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
                   {(() => {
                     const paths0 = getResponsiveImagePath(app.images.results[0]);
-                    return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'contain', gridColumn: '1 / -1' }} />;
+                    return <img srcSet={`${paths0.mobile} 600w, ${paths0.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths0.desktop} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'contain', gridColumn: '1 / -1' }} />;
                   })()}
                   {app.images.results[1] && (() => {
                     const paths1 = getResponsiveImagePath(app.images.results[1]);
-                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'contain' }} />;
+                    return <img srcSet={`${paths1.mobile} 600w, ${paths1.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths1.desktop} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'contain' }} />;
                   })()}
                   {app.images.results[2] && (() => {
                     const paths2 = getResponsiveImagePath(app.images.results[2]);
-                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'contain' }} />;
+                    return <img srcSet={`${paths2.mobile} 600w, ${paths2.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths2.desktop} alt={`${app.title} Result 3`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'contain' }} />;
                   })()}
                   {app.images.results[3] && (() => {
                     const paths3 = getResponsiveImagePath(app.images.results[3]);
-                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'contain', gridColumn: '1 / -1' }} />;
+                    return <img srcSet={`${paths3.mobile} 600w, ${paths3.desktop} 1256w`} sizes="(max-width: 600px) 100vw, 100vw" src={paths3.desktop} alt={`${app.title} Result 4`} loading="lazy" className="card-stack" style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'contain', gridColumn: '1 / -1' }} />;
                   })()}
                 </div>
               )}
