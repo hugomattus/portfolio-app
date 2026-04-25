@@ -110,7 +110,7 @@ export const projects: Project[] = [
         images: {
           hero: '',
           features: ['/assets/bora/Bora Motorista/Motorista 1.png', '/assets/bora/Bora Motorista/Motorista 2.png', '/assets/bora/Bora Motorista/Motorista 3.png'],
-          results: ['/assets/bora/Bora Motorista/Motorista 4.png', '/assets/bora/Bora Motorista/Motorista 5.png', '/assets/bora/Bora Motorista/Motorista 6.png'],
+          results: ['/assets/bora/Bora Motorista/Motorista 4.png', '/assets/bora/Bora Motorista/Motorista 5.png', '/assets/bora/Bora Motorista/Motorista 6.png', '/assets/bora/Bora Motorista/Motorista 7.png'],
         },
       },
     ],
