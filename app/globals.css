@@ -988,6 +988,9 @@ body.hero-animating {
 
   .project-grid-3col img {
     height: auto !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 
   .project-grid-4img {
