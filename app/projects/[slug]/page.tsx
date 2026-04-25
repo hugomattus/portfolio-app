@@ -34,6 +34,16 @@ export default function ProjectPage() {
     return (projectTranslations as any)?.[key] || (otherProject as any)?.[key];
   };
 
+  const getImageSrcSet = (imagePath: string) => {
+    const pathParts = imagePath.split('/');
+    const fileName = pathParts[pathParts.length - 1];
+    const folder = pathParts.slice(0, -1).join('/');
+    const fileNameWithoutExt = fileName.replace('.png', '');
+    const mobileFile = `${fileNameWithoutExt} mobile.png`;
+    const mobilePath = `${folder}/${mobileFile}`;
+    return `${mobilePath} 360w, ${imagePath} 1256w`;
+  };
+
   useEffect(() => {
     setIsExiting(false);
     const foundProject = getProject(slug);
@@ -159,13 +169,14 @@ export default function ProjectPage() {
                 </div>
               )}
 
+
               {slug === 'Freela' && appIndex === 1 && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
-                  <img src="/assets/Freela/card 4 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
-                  <img src="/assets/Freela/card 3 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
-                  <img src="/assets/Freela/card 5 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
-                  <img src="/assets/Freela/card 6 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
-                  <img src="/assets/Freela/card 7 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
+                  <img srcSet="/assets/Freela/card 4 results mobile.png 360w, /assets/Freela/card 4 results.png 1256w" src="/assets/Freela/card 4 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
+                  <img srcSet="/assets/Freela/card 3 results mobile.png 360w, /assets/Freela/card 3 results.png 1256w" src="/assets/Freela/card 3 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
+                  <img srcSet="/assets/Freela/card 5 results mobile.png 360w, /assets/Freela/card 5 results.png 1256w" src="/assets/Freela/card 5 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
+                  <img srcSet="/assets/Freela/card 6 results mobile.png 360w, /assets/Freela/card 6 results.png 1256w" src="/assets/Freela/card 6 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />
+                  <img srcSet="/assets/Freela/card 7 results mobile.png 360w, /assets/Freela/card 7 results.png 1256w" src="/assets/Freela/card 7 results.png" alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />
                 </div>
               )}
 
@@ -176,17 +187,17 @@ export default function ProjectPage() {
               {app.images.features.some(img => img) && (
                 <div className="project-grid-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '80px' }}>
                   {app.images.features.map((img, index) => (
-                    img && <img key={index} src={img} alt={`${app.title} Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
+                    img && <img key={index} srcSet={getImageSrcSet(img)} src={img} alt={`${app.title} Feature ${index + 1}`} loading="lazy" className="card-stack" style={{ width: '100%', height: '704px', borderRadius: '8px', objectFit: 'cover' }} />
                   ))}
                 </div>
               )}
 
               {app.images.results.some(img => img) && (
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
-                  <img src={app.images.results[0]} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
-                  {app.images.results[1] && <img src={app.images.results[1]} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
-                  {app.images.results[2] && <img src={app.images.results[2]} alt={`${app.title} Result 3`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
-                  {app.images.results[3] && <img src={app.images.results[3]} alt={`${app.title} Result 4`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />}
+                  <img srcSet={getImageSrcSet(app.images.results[0])} src={app.images.results[0]} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />
+                  {app.images.results[1] && <img srcSet={getImageSrcSet(app.images.results[1])} src={app.images.results[1]} alt={`${app.title} Result 2`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
+                  {app.images.results[2] && <img srcSet={getImageSrcSet(app.images.results[2])} src={app.images.results[2]} alt={`${app.title} Result 3`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />}
+                  {app.images.results[3] && <img srcSet={getImageSrcSet(app.images.results[3])} src={app.images.results[3]} alt={`${app.title} Result 4`} loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover', gridColumn: '1 / -1' }} />}
                 </div>
               )}
             </div>
