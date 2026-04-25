@@ -1022,7 +1022,7 @@ body.hero-animating {
   }
 
   .project-header-section img {
-    height: 300px !important;
+    height: auto !important;
   }
 
   .project-title {
