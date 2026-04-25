@@ -165,14 +165,14 @@ export default function ProjectPage() {
               </div>
 
               {slug === 'Freela' && appIndex === 0 && (
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
-                  <img src="/assets/Freela/Card 2 results.png" alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px', gridColumn: '1 / -1' }} />
+                <div className="grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
+                  {(() => { const paths = getResponsiveImagePath('/assets/Freela/Card 2 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt={`${app.title} Result 1`} loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px', gridColumn: '1 / -1' }} />; })()}
                 </div>
               )}
 
 
               {slug === 'Freela' && appIndex === 1 && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
+                <div className="grid-2col" style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '80px' }}>
                   {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 4 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
                   {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 3 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', borderRadius: '8px' }} />; })()}
                   {(() => { const paths = getResponsiveImagePath('/assets/Freela/card 5 results.png'); return <img srcSet={`${paths.mobile} 600w, ${paths.desktop} 1256w`} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" src={paths.desktop} alt="Dashboard Result" loading="lazy" className="card-stack" style={{ width: '100%', height: '600px', borderRadius: '8px', objectFit: 'cover' }} />; })()}
