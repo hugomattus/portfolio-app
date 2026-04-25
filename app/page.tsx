@@ -52,7 +52,7 @@ export default function Home() {
           </a>
         </div>
         <div className="hero-video">
-          <video width="1320" height="792" autoPlay muted loop playsInline preload="none" poster="/assets/m5/Capa M5.png">
+          <video width="1320" height="792" autoPlay muted loop playsInline preload="metadata">
             <source src="/assets/345137_medium.mp4" type="video/mp4" />
           </video>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
           {projects.map((project, index) => (
             <div key={project.id} className="work-card-wrapper" style={{ opacity: project.comingSoon ? 0.6 : 1 }}>
               <Link href={project.comingSoon ? '#' : `/projects/${project.slug}`} className={`work-card ${project.comingSoon ? 'coming-soon' : ''}`} data-coming-soon={project.comingSoon ? 'true' : 'false'} style={{ overflow: 'hidden', borderRadius: '8px', pointerEvents: project.comingSoon ? 'none' : 'auto' }} onClick={(e) => project.comingSoon && e.preventDefault()}>
-                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
+                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px', width: '100%', height: '400px' }}>
                   {project.cover && <Image src={project.cover} alt={project.title} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover', transition: 'transform 0.3s ease-out', cursor: 'pointer' }} priority={index === 0} onMouseEnter={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1.05)')} onMouseLeave={(e) => !project.comingSoon && (e.currentTarget.style.transform = 'scale(1)')} />}
                   {project.comingSoon && (
                     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.4)', color: 'white', fontSize: '18px', fontWeight: 500 }}>
