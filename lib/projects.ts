@@ -142,7 +142,7 @@ export const projects: Project[] = [
     images: {
       hero: '/assets/Freela/Capa.png',
       features: ['', '', ''],
-      results: ['', '', '', ''],
+      results: ['', '', '', '', '/assets/Freela/card 5 results.png', '/assets/Freela/card 6 results.png', '/assets/Freela/card 7 results.png'],
     },
     apps: [
       {
